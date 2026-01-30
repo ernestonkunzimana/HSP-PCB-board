@@ -1,11 +1,11 @@
 # Replace the text below to customize your site
-site_name: Ephron Twagirimana
-site_description: Ephron Fabricademy site
-site_author: Ephron Twagirimana
-copyright: Copyright 2026 Ephron Twagirimana- Creactive Commons Attribution Non-commercial
+site_name: Niyomugenga Grace
+site_description: Niyomugenga Grace - Fabricademy site
+site_author: Niyomugenga Grace
+copyright: Copyright 2026 Niyomugenga Grace - Creative Commons Attribution Non-commercial
 
-site_url: https://github.com/Ephron99
-repo_url: https://github.com/Ephron99/Fabricademy
+site_url: https://github.com/NiyomugengaGrace
+repo_url: https://github.com/NiyomugengaGrace/Fabricademy
 repo_name: UR-ACEIoT Documentation site
 
 extra:
@@ -40,8 +40,8 @@ theme:
     - navigation.footer
 
 # Read more here https://squidfunk.github.io/mkdocs-material/customization/#additional-css 
-# extra_css:
-#   - stylesheets/extra.css
+extra_css:
+  - stylesheets/extra.css
 
 # extra_javascript:
 #   - 'javascript/extra.js'
@@ -70,3 +70,18 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - meta
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - Daily Activities:
+    - Overview: Daily-Activity/index.md
+    - Day 1 - Foundations of Modeling & Fabrication: Daily-Activity/day_1.md
+    - Day 2 - Digital Modeling for Fabrication: Daily-Activity/day_2.md
+    - Day 3 - Technical Documentation & Quality Control: Daily-Activity/day_3.md
+    - Day 4 - Materials & Fabrication Methods: Daily-Activity/day_4.md
+    - Day 5 - Digital Fabrication I - CNC & Laser Cutting: Daily-Activity/day_5.md
+    - Day 6 - Digital Fabrication II - Additive Manufacturing: Daily-Activity/day_6.md
+    - Day 7 - Digital Fabrication III - CNC Router Milling: Daily-Activity/day_7.md
+    - Day 8 - Finishing & Surface Enhancement: Daily-Activity/day_8.md
+    - Day 9 - Final Presentation & Documentation: Daily-Activity/day_9.md

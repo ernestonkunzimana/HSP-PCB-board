@@ -209,6 +209,3 @@ This project documentation is for educational purposes as part of the UR-ACEIoT 
 ---
 
 **Project Status:** Complete - CO3 Nameplate fabrication documented across 9 comprehensive days!
-
-
-Ernest Nkunzimana

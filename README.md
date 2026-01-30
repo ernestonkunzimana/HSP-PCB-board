@@ -9,13 +9,7 @@ This documentation site showcases the complete digital fabrication workflow for 
 - **Process**: CAD modeling → Prototyping → CNC milling → Finishing
 - **Techniques**: FreeCAD, laser cutting, 3D printing, CNC routing, hand finishing
 
-Visit the [live documentation site](Ran terminal command: git status
-
-Ran terminal command: git push origin main
-
-Ran terminal command: git log --oneline -5
-
-🎉 **Perfect! All files successfully pushed to your repository!**
+Visit the [live documentation site](https://niyomugenga92.github.io/Niyomugenga-URACEIoT/) to explore the full project.
 
 ## Summary of what's now on GitHub:
 
@@ -48,9 +42,7 @@ Check the **Actions** tab in your GitHub repository to see the deployment progre
 
 * This website is built and published automatically using **GitHub Actions**, every time you push changes to the repository
 * The markdown content is generated into a site using **MkDocs**, a static site generator written in Python
-* Uses the **Material for MkDocs** theme with custom teal/purple color scheme
-* Includes **9 comprehensive daily activities** documenting the complete CO3 fabrication process
-* Uses the **Material for MkDocs** theme with custom teal/purple color scheme
+* Uses the **Material for MkDocs** theme with a custom teal/purple color scheme
 * Includes **9 comprehensive daily activities** documenting the complete CO3 fabrication process
 
 ---
@@ -71,18 +63,22 @@ Check the **Actions** tab in your GitHub repository to see the deployment progre
 2. **Create virtual environment & install dependencies**
    ```bash
    python -m venv .venv
-   .venv\Scripts\activate  # On Windows
-   # source .venv/bin/activate  # On Mac/Linux
+   # On macOS / Linux
+   source .venv/bin/activate
+   # On Windows (PowerShell)
+   .venv\Scripts\Activate.ps1
+   # On Windows (cmd)
+   .venv\Scripts\activate.bat
    pip install -r requirements.txt
    ```
 
 3. **Run the development server**
    ```bash
-   python -m mkdocs serve
+   mkdocs serve
    ```
 
 4. **View your site**
-   - Open your browser to `http://127.0.0.1:8000/NiyomugengaGrace/`
+   - Open your browser to `http://127.0.0.1:8000/`
    - Edit markdown files in `docs/` and see live changes!
 
 ---
@@ -90,7 +86,7 @@ Check the **Actions** tab in your GitHub repository to see the deployment progre
 ## Project Structure
 
 ```
-EphronMk/
+Niyomugenga-URACEIoT/
 ├── .github/              # GitHub Actions workflow (auto-deployment)
 ├── docs/                 # All documentation content
 │   ├── Daily-Activity/   # 9 days of CO3 project documentation

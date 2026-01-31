@@ -12,72 +12,157 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/ernestonkunzimana
+      name: GitHub Profile
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/ernestonkunzimana
+      name: LinkedIn Profile
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/ernestonkunzimana
+      name: Twitter Profile
+    - icon: fontawesome/solid/graduation-cap
+      link: https://orcid.org/0009-0007-2107-6572
+      name: ORCID Profile
   orcid: https://orcid.org/0009-0007-2107-6572
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # Add your Google Analytics ID
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
 
 theme:
   # The name of the theme, needs to match your requirements.txt file
   name: material
+  custom_dir: overrides
   # Material theme options:
   palette:
-    # try other colors from https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
-    primary: blue
-    accent: light blue
+    # Dark mode (primary)
+    - scheme: slate
+      primary: deep-purple
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+    # Light mode
+    - scheme: default
+      primary: deep-purple
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
   font:
     # See available fonts from https://fonts.google.com/
-    text: Montserrat
-    code: Roboto Mono
+    text: Inter
+    code: Fira Code
   icon:
     # Read about icons at https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/
-    logo: material/library
+    logo: material/library-shelves
     repo: fontawesome/brands/github
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/lightbulb
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/xmark
+      danger: fontawesome/solid/bolt
+      bug: fontawesome/solid/bug
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
   features:
     - navigation.tabs
-    - navigation.footer
-    - navigation.sections
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
     - navigation.expand
     - navigation.indexes
+    - navigation.sections
     - navigation.top
+    - navigation.footer
+    - navigation.path
+    - toc.integrate
+    - toc.follow
     - search.suggest
     - search.highlight
-    - content.code.annotate
-    - content.code.copy
+    - search.share
     - content.tabs.link
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.footnote.backlinks
+    - content.tooltips
 
 # Read more here https://squidfunk.github.io/mkdocs-material/customization/#additional-css 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/modern.css
 
-# extra_javascript:
-#   - 'javascript/extra.js'
+extra_javascript:
+  - javascript/theme-switcher.js
+  - javascript/accessibility.js
 
 plugins:
-  - search
-  - glightbox
+  - search:
+      lang:
+        - en
+  - glightbox:
+      auto_load: true
   - git-revision-date:
       enabled_if_env: CI
+  - privacy
 
 # See more extensions at https://squidfunk.github.io/mkdocs-material/reference/
 markdown_extensions:
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.highlight:
+      use_pygments: true
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - codehilite:
       guess_lang: false
   - toc:
-      permalink: true
-  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
-  - pymdownx.details
-  # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/
-  - pymdownx.tabbed:
-      alternate_style: true 
-  - pymdownx.superfences
+      permalink: ⚓
+      title: Table of Contents
+      toc_depth: 2-3
   - tables
   - footnotes
   - attr_list
   - md_in_html
   - meta
+  - abbr
+  - sane_lists
 
 # Navigation structure
 nav:

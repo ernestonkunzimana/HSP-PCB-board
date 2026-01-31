@@ -14,11 +14,11 @@ extra:
       link: https://github.com/ernestonkunzimana
       name: GitHub Profile
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/ernestonkunzimana
+      link: https://www.linkedin.com/in/ernest-nkunzimana-975452264/
       name: LinkedIn Profile
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/ernestonkunzimana
-      name: Twitter Profile
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/ErnestNkunzima
+      name: Twitter/X Profile
     - icon: fontawesome/solid/graduation-cap
       link: https://orcid.org/0009-0007-2107-6572
       name: ORCID Profile

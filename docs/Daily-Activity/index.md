@@ -46,15 +46,12 @@ Click any day below to explore that phase of development:
 
 ### **Week 1: Foundation & Design**
 
-[![](../images/day_1/trustcollapse.png){ width=200 }](./day_1.md)  
 **[Day 1: Foundations & Problem Statement](./day_1.md)**  
 Understand digital trust collapse. Establish threat model for HSP-PCB.
 
-[![](../images/day_2/architecture.png){ width=200 }](./day_2.md)  
 **[Day 2: Digital Modeling & Architecture](./day_2.md)**  
 CAD workflows, parametric design, block diagrams, DFM constraints.
 
-[![](../images/day_3/pcb_design.png){ width=200 }](./day_3.md)  
 **[Day 3: PCB Milling & DFM](./day_3.md)**  
 Manufacturing constraints, Gerber files, BOM, anti-cloning design.
 
@@ -62,15 +59,12 @@ Manufacturing constraints, Gerber files, BOM, anti-cloning design.
 
 ### **Week 2: Fabrication Methods**
 
-[![](../images/day_4/materials.png){ width=200 }](./day_4.md)  
 **[Day 4: Materials & Environmental Constraints](./day_4.md)**  
 Material selection, sustainability, repairability, lifecycle planning.
 
-[![](../images/day_5/enclosure.png){ width=200 }](./day_5.md)  
 **[Day 5: CNC & Laser Cutting](./day_5.md)**  
 Subtractive fabrication for aluminum enclosure & tamper casing.
 
-[![](../images/day_6/prototype.png){ width=200 }](./day_6.md)  
 **[Day 6: Additive Manufacturing](./day_6.md)**  
 3D printing prototypes, form-fit validation, assembly testing.
 
@@ -78,15 +72,12 @@ Subtractive fabrication for aluminum enclosure & tamper casing.
 
 ### **Week 3: Integration & Production**
 
-[![](../images/day_7/integration.png){ width=200 }](./day_7.md)  
 **[Day 7: CNC Router Milling & Integration](./day_7.md)**  
 Modular attachment design, scaled production, integration scenarios.
 
-[![](../images/day_8/casting.png){ width=200 }](./day_8.md)  
 **[Day 8: Molding & Casting](./day_8.md)**  
 Replication at scale, silicone molds, resin casting, production economics.
 
-[![](../images/day_9/complete.png){ width=200 }](./day_9.md)  
 **[Day 9: Final Fabrication & Documentation](./day_9.md)**  
 Threat matrix validation, deployment scenarios, production roadmap, ethical commitments.
 

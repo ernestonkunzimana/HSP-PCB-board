@@ -1,0 +1,3001 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HSP-PCB Board - Human-Sovereign Privacy & Security PCB - A 9-Day Digital Fabrication & Systems Design Journey">
+      
+      
+        <meta name="author" content="Ernest Nkunzimana">
+      
+      
+        <link rel="canonical" href="https://ernestonkunzimana.github.io/HSP-PCB-board/Daily-Activity/day_2/">
+      
+      
+        <link rel="prev" href="../day_1/">
+      
+      
+        <link rel="next" href="../day_3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Day 2 - Digital Modeling & Architecture - Ernest Nkunzimana-ACEIoT-WISENeT</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#day-2-digital-modeling-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Ernest Nkunzimana-ACEIoT-WISENeT" class="md-header__button md-logo" aria-label="Ernest Nkunzimana-ACEIoT-WISENeT" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ernest Nkunzimana-ACEIoT-WISENeT
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Day 2 - Digital Modeling & Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ernestonkunzimana/HSP-PCB-board" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HSP-PCB-board
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Daily Course Activities
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ernest Nkunzimana-ACEIoT-WISENeT" class="md-nav__button md-logo" aria-label="Ernest Nkunzimana-ACEIoT-WISENeT" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ernest Nkunzimana-ACEIoT-WISENeT
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ernestonkunzimana/HSP-PCB-board" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HSP-PCB-board
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Course Activities
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Daily Course Activities
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 1 - Foundations & Problem Statement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 2 - Digital Modeling & Architecture
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 2 - Digital Modeling & Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#course-day-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Course Day Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hsp-pcb-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏛️ HSP-PCB Architecture Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏛️ HSP-PCB Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-level-block-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System-Level Block Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#major-subsystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Major Subsystems
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cad-workflow-freecad-kicad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎨 CAD Workflow: FreeCAD + KiCad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 CAD Workflow: FreeCAD + KiCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-parametric-outline-freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Parametric Outline (FreeCAD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Parametric Outline (FreeCAD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraints-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constraints &amp; Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freecad-model-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FreeCAD Model Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-pcb-layout-kicad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: PCB Layout (KiCad)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: PCB Layout (KiCad)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kicad-design-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KiCad Design Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-aware-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security-Aware Layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamper-detection-traces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tamper Detection Traces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-mechanical-enclosure-freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Mechanical Enclosure (FreeCAD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Mechanical Enclosure (FreeCAD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enclosure-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enclosure Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-for-manufacturing-dfm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Design for Manufacturing (DFM)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Design for Manufacturing (DFM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manufacturing-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturing Constraints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manufacturing Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pcb-milling-day-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PCB Milling (Day 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cnc-routing-day-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC Routing (Day 5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-printing-day-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D Printing (Day 6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#day-2-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Day 2 Deliverables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Day 2 Deliverables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cad-files-generated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAD Files Generated
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-from-concept-to-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Reflection: From Concept to Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Reflection: From Concept to Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-bridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Bridge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cad-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAD Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-co3-nameplate-cad-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project: CO3 Nameplate CAD Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project: CO3 Nameplate CAD Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Specifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#precision-modeling-and-scale-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Precision Modeling and Scale Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Precision Modeling and Scale Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Precision
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-approach-to-precision-for-co3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Approach to Precision for CO3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-for-manufacturing-dfm-applied-to-co3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design for Manufacturing (DFM) Applied to CO3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design for Manufacturing (DFM) Applied to CO3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dfm-principles-for-cnc-milling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DFM Principles for CNC Milling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-dfm-decisions-for-co3-nameplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical DFM Decisions for CO3 Nameplate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-workflow-creating-the-co3-nameplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modeling Workflow: Creating the CO3 Nameplate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modeling Workflow: Creating the CO3 Nameplate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-oval-base-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Oval Base Creation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-creating-letter-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Creating Letter Geometry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-edge-refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Edge Refinement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabrication-considerations-for-co3-nameplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fabrication Considerations for CO3 Nameplate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fabrication Considerations for CO3 Nameplate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-validation-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Validation Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-formats-for-digital-fabrication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Formats for Digital Fabrication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Formats for Digital Fabrication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exporting-co3-nameplate-for-different-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting CO3 Nameplate for Different Processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-process-from-freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export Process from FreeCAD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#precision-measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Precision Measurements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Precision Measurements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimensional-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensional Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reflection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#day-2-achievements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 2 Achievements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenges-overcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenges Overcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cad-design-gallery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAD Design Gallery
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CAD Design Gallery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#next-steps-for-day-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps for Day 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 3 - PCB Milling & Design for Manufacturability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 4 - Materials & Environmental Constraints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 5 - CNC & Laser Cutting (Enclosure Design)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 6 - Additive Manufacturing & Prototyping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 7 - CNC Router Milling & Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 8 - Molding & Casting Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 9 - Final Fabrication & Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#course-day-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Course Day Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hsp-pcb-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏛️ HSP-PCB Architecture Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏛️ HSP-PCB Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-level-block-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System-Level Block Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#major-subsystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Major Subsystems
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cad-workflow-freecad-kicad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎨 CAD Workflow: FreeCAD + KiCad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 CAD Workflow: FreeCAD + KiCad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-parametric-outline-freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Parametric Outline (FreeCAD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Parametric Outline (FreeCAD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraints-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constraints &amp; Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freecad-model-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FreeCAD Model Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-pcb-layout-kicad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: PCB Layout (KiCad)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: PCB Layout (KiCad)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kicad-design-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KiCad Design Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-aware-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security-Aware Layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamper-detection-traces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tamper Detection Traces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-mechanical-enclosure-freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Mechanical Enclosure (FreeCAD)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Mechanical Enclosure (FreeCAD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enclosure-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enclosure Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-for-manufacturing-dfm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Design for Manufacturing (DFM)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Design for Manufacturing (DFM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manufacturing-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturing Constraints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manufacturing Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pcb-milling-day-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PCB Milling (Day 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cnc-routing-day-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC Routing (Day 5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-printing-day-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D Printing (Day 6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#day-2-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Day 2 Deliverables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Day 2 Deliverables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cad-files-generated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAD Files Generated
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-from-concept-to-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Reflection: From Concept to Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Reflection: From Concept to Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-bridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Bridge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Insight
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cad-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAD Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-co3-nameplate-cad-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project: CO3 Nameplate CAD Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project: CO3 Nameplate CAD Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Specifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#precision-modeling-and-scale-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Precision Modeling and Scale Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Precision Modeling and Scale Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Precision
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-approach-to-precision-for-co3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Approach to Precision for CO3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-for-manufacturing-dfm-applied-to-co3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design for Manufacturing (DFM) Applied to CO3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design for Manufacturing (DFM) Applied to CO3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dfm-principles-for-cnc-milling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DFM Principles for CNC Milling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-dfm-decisions-for-co3-nameplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical DFM Decisions for CO3 Nameplate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling-workflow-creating-the-co3-nameplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modeling Workflow: Creating the CO3 Nameplate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modeling Workflow: Creating the CO3 Nameplate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-oval-base-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Oval Base Creation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-creating-letter-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Creating Letter Geometry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-edge-refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Edge Refinement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabrication-considerations-for-co3-nameplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fabrication Considerations for CO3 Nameplate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fabrication Considerations for CO3 Nameplate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-validation-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Validation Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#material-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-formats-for-digital-fabrication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Formats for Digital Fabrication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Formats for Digital Fabrication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exporting-co3-nameplate-for-different-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting CO3 Nameplate for Different Processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-process-from-freecad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export Process from FreeCAD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#precision-measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Precision Measurements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Precision Measurements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimensional-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensional Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reflection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#day-2-achievements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 2 Achievements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenges-overcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenges Overcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cad-design-gallery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAD Design Gallery
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CAD Design Gallery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#next-steps-for-day-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps for Day 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="day-2-digital-modeling-architecture">Day 2 - Digital Modeling &amp; Architecture<a class="headerlink" href="#day-2-digital-modeling-architecture" title="Permanent link">&para;</a></h1>
+<h2 id="course-day-overview">📌 Course Day Overview<a class="headerlink" href="#course-day-overview" title="Permanent link">&para;</a></h2>
+<p><strong>Theme:</strong> From concept to CAD. Building parametric models for HSP-PCB.</p>
+<p><strong>Learning Objectives:</strong>
+- Translate threat model into hardware architecture
+- Create parametric 3D model of PCB form factor
+- Design block diagrams for HSP-PCB subsystems
+- Apply Design for Manufacturing (DFM) constraints
+- Establish CAD workflows for precision fabrication</p>
+<hr />
+<h2 id="hsp-pcb-architecture-overview">🏛️ HSP-PCB Architecture Overview<a class="headerlink" href="#hsp-pcb-architecture-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-level-block-diagram">System-Level Block Diagram<a class="headerlink" href="#system-level-block-diagram" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────────────────────┐
+│              HSP-PCB Security Coprocessor                │
+├─────────────────────────────────────────────────────────┤
+│                                                           │
+│  ┌──────────────────┐         ┌──────────────────┐      │
+│  │ MCU + Crypto     │────────→│  Tamper Detection│      │
+│  │ (STM32L0 + ATECC)│         │  System          │      │
+│  │                  │         │                  │      │
+│  │ • 32-bit ARM     │         │ • Pressure       │      │
+│  │ • AES-256        │         │ • Continuity     │      │
+│  │ • ECC keygen     │         │ • Temperature    │      │
+│  └──────────────────┘         └──────────────────┘      │
+│          │                             │                 │
+│          └─────────────┬───────────────┘                │
+│                        │                                 │
+│              ┌─────────▼──────────┐                     │
+│              │  Secure Storage    │                     │
+│              │  (Flash + EEPROM)  │                     │
+│              │                    │                     │
+│              │ • Crypto keys      │                     │
+│              │ • Device cert      │                     │
+│              │ • Firmware         │                     │
+│              └────────────────────┘                     │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+        │                              │
+        │ I2C/SPI                      │ Power &amp; GND
+        │                              │
+     (To host MCU)            (3.3V battery or 5V USB)
+</code></pre></div>
+<h3 id="major-subsystems">Major Subsystems<a class="headerlink" href="#major-subsystems" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Subsystem</th>
+<th>Purpose</th>
+<th>Key Components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security Processor</strong></td>
+<td>Verify, attest, decrypt</td>
+<td>STM32L0 ARM MCU + ATECC crypto chip</td>
+</tr>
+<tr>
+<td><strong>Tamper Detection</strong></td>
+<td>Detect physical attacks</td>
+<td>Pressure sensors, continuity traces</td>
+</tr>
+<tr>
+<td><strong>Secure Storage</strong></td>
+<td>Protect cryptographic keys</td>
+<td>Encrypted Flash + EEPROM</td>
+</tr>
+<tr>
+<td><strong>Power Management</strong></td>
+<td>Low-power + secure shutdown</td>
+<td>DC-DC converters, watchdog timer</td>
+</tr>
+<tr>
+<td><strong>Communication</strong></td>
+<td>Interface with host systems</td>
+<td>I2C/SPI isolation, optional NFC</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cad-workflow-freecad-kicad">🎨 CAD Workflow: FreeCAD + KiCad<a class="headerlink" href="#cad-workflow-freecad-kicad" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-parametric-outline-freecad">Step 1: Parametric Outline (FreeCAD)<a class="headerlink" href="#step-1-parametric-outline-freecad" title="Permanent link">&para;</a></h3>
+<p><strong>Goal:</strong> Create a credit-card form factor PCB outline with tolerance stack-ups.</p>
+<h4 id="constraints-parameters">Constraints &amp; Parameters<a class="headerlink" href="#constraints-parameters" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Length</strong></td>
+<td>85 mm</td>
+<td>±0.5 mm (manufacturing tolerance)</td>
+</tr>
+<tr>
+<td><strong>Width</strong></td>
+<td>54 mm</td>
+<td>±0.5 mm (ISO/IEC 7810 ID-1 standard)</td>
+</tr>
+<tr>
+<td><strong>Thickness</strong></td>
+<td>1.6 mm</td>
+<td>FR-4 PCB standard thickness</td>
+</tr>
+<tr>
+<td><strong>Corner Radius</strong></td>
+<td>3.0 mm</td>
+<td>Soft corners for durability</td>
+</tr>
+<tr>
+<td><strong>Mount Points</strong></td>
+<td>4× M3 holes</td>
+<td>For enclosure attachment</td>
+</tr>
+<tr>
+<td><strong>Port Openings</strong></td>
+<td>SMA/JST (2×)</td>
+<td>For external antenna &amp; power</td>
+</tr>
+</tbody>
+</table>
+<h4 id="freecad-model-steps">FreeCAD Model Steps<a class="headerlink" href="#freecad-model-steps" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Create 2D sketch with constraints (parametric)</li>
+<li>Extrude to 1.6 mm thickness</li>
+<li>Add corner fillets (R3.0 mm)</li>
+<li>Define mount points with hole diameter constraints</li>
+<li>Export as STEP for KiCad import</li>
+</ol>
+<p><strong>Key Design Decision:</strong> Parametric model allows quick iteration if form factor changes.</p>
+<h3 id="step-2-pcb-layout-kicad">Step 2: PCB Layout (KiCad)<a class="headerlink" href="#step-2-pcb-layout-kicad" title="Permanent link">&para;</a></h3>
+<p><strong>Goal:</strong> Route signals with security-aware trace layout.</p>
+<h4 id="kicad-design-rules">KiCad Design Rules<a class="headerlink" href="#kicad-design-rules" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Trace Width:</strong> 0.25 mm (10 mils) for power, 0.15 mm (6 mils) for signals</li>
+<li><strong>Clearance:</strong> 0.15 mm (6 mils) minimum (conservative for hand-tracing if needed)</li>
+<li><strong>Via Size:</strong> 0.3 mm drill, 0.8 mm pad (through-hole vias for thermal relief)</li>
+<li><strong>Layer Stack:</strong> 2-layer design (Top + GND; minimize layers for verifiability)</li>
+</ul>
+<h4 id="security-aware-layout">Security-Aware Layout<a class="headerlink" href="#security-aware-layout" title="Permanent link">&para;</a></h4>
+<p><strong>Principle:</strong> Make attack surface visible through layout.</p>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────┐
+│       Top Layer (Signals)        │
+│                                 │
+│  [MCU]  [ATECC]  [Flash]       │
+│    │       │         │          │
+│    └───────┼─────────┘          │
+│        [Tamper Sensors]         │
+│        (continuity traces)      │
+│                                 │
+└─────────────────────────────────┘
+
+┌─────────────────────────────────┐
+│   Bottom Layer (GND + Power)     │
+│                                 │
+│  GND plane (continuous)          │
+│  + Power distribution traces     │
+│                                 │
+└─────────────────────────────────┘
+</code></pre></div>
+<h4 id="tamper-detection-traces">Tamper Detection Traces<a class="headerlink" href="#tamper-detection-traces" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Perimeter Loop:</strong> Continuous trace around device boundary</li>
+<li>If trace is cut, micro detects open circuit → triggers secure deletion</li>
+<li>
+<p>Visible on PCB (not hidden) for auditability</p>
+</li>
+<li>
+<p><strong>Component Continuity Check:</strong> Traces under each IC</p>
+</li>
+<li>Verify no components are cloned or replaced</li>
+<li>Regular self-test during operation</li>
+</ul>
+<h3 id="step-3-mechanical-enclosure-freecad">Step 3: Mechanical Enclosure (FreeCAD)<a class="headerlink" href="#step-3-mechanical-enclosure-freecad" title="Permanent link">&para;</a></h3>
+<p><strong>Goal:</strong> Design aluminum enclosure that supports tamper detection casing.</p>
+<h4 id="enclosure-features">Enclosure Features<a class="headerlink" href="#enclosure-features" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Purpose</th>
+<th>Design</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sealed Case</strong></td>
+<td>Faraday cage + physical integrity</td>
+<td>Aluminum 5052-H32 (2mm) with gasket</td>
+</tr>
+<tr>
+<td><strong>Port Glands</strong></td>
+<td>Sealed pass-throughs for power/comms</td>
+<td>M5 glands with O-ring seals</td>
+</tr>
+<tr>
+<td><strong>Pressure Cavity</strong></td>
+<td>Room for pressure sensor</td>
+<td>Sealed air pocket with vent to sensor</td>
+</tr>
+<tr>
+<td><strong>Attachment Points</strong></td>
+<td>Modular integration into vehicles/homes</td>
+<td>¼-20 tapped holes on sides</td>
+</tr>
+<tr>
+<td><strong>Bottom Access Panel</strong></td>
+<td>For battery replacement</td>
+<td>Tool-free latches (security screw)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="design-for-manufacturing-dfm">🔧 Design for Manufacturing (DFM)<a class="headerlink" href="#design-for-manufacturing-dfm" title="Permanent link">&para;</a></h2>
+<h3 id="manufacturing-constraints">Manufacturing Constraints<a class="headerlink" href="#manufacturing-constraints" title="Permanent link">&para;</a></h3>
+<h4 id="pcb-milling-day-3">PCB Milling (Day 3)<a class="headerlink" href="#pcb-milling-day-3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Min trace width:</strong> 0.15 mm (6 mils) for 1/32" bit</li>
+<li><strong>Min clearance:</strong> 0.15 mm between traces</li>
+<li><strong>Via aspect ratio:</strong> ≤ 1:10 (depth:width)</li>
+<li><strong>Undercuts:</strong> Avoid; mill from top-down only</li>
+</ul>
+<h4 id="cnc-routing-day-5">CNC Routing (Day 5)<a class="headerlink" href="#cnc-routing-day-5" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Min feature:</strong> 2 mm diameter (tool path)</li>
+<li><strong>Undercuts:</strong> Require custom bits or multi-axis milling</li>
+<li><strong>Draft angle:</strong> 0–5° (vertical walls acceptable)</li>
+<li><strong>Material:</strong> Aluminum 5052-H32 (easy machine)</li>
+</ul>
+<h4 id="3d-printing-day-6">3D Printing (Day 6)<a class="headerlink" href="#3d-printing-day-6" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Wall thickness:</strong> Min 1.5 mm (Ultimaker FDM)</li>
+<li><strong>Overhangs:</strong> Max 45° without support</li>
+<li><strong>Resolution:</strong> ±0.3 mm (0.2 mm layer height)</li>
+<li><strong>Material:</strong> PLA (biodegradable, easy post-processing)</li>
+</ul>
+<hr />
+<h2 id="day-2-deliverables">📊 Day 2 Deliverables<a class="headerlink" href="#day-2-deliverables" title="Permanent link">&para;</a></h2>
+<h3 id="cad-files-generated">CAD Files Generated<a class="headerlink" href="#cad-files-generated" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>STEP Model</strong> — Parametric PCB outline (FreeCAD → KiCad import)<br />
+✅ <strong>KiCad Schematic</strong> — Preliminary component list (netlist)<br />
+✅ <strong>Enclosure CAD</strong> — FreeCAD assembly drawing<br />
+✅ <strong>Block Diagram</strong> — System architecture (PNG + Visio)<br />
+✅ <strong>DFM Report</strong> — Manufacturing constraints checklist  </p>
+<h3 id="file-structure">File Structure<a class="headerlink" href="#file-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>UR-ACEIoT/
+├── docs/
+│   ├── day_2.md (this file)
+│   ├── images/day_2/
+│   │   ├── block_diagram.png
+│   │   ├── pcb_outline.png
+│   │   ├── enclosure_assembly.png
+│   │   └── dfm_checklist.pdf
+├── cad/
+│   ├── HSP_PCB_Outline.FCStd     # FreeCAD model
+│   ├── HSP_PCB_Outline.STEP      # STEP export (import to KiCad)
+│   ├── HSP_PCB.kicad_pcb         # KiCad layout (preliminary)
+│   ├── HSP_PCB.sch               # KiCad schematic
+│   └── Enclosure_v1.FCStd        # Mechanical design
+</code></pre></div>
+<hr />
+<h2 id="reflection-from-concept-to-model">🧠 Reflection: From Concept to Model<a class="headerlink" href="#reflection-from-concept-to-model" title="Permanent link">&para;</a></h2>
+<h3 id="the-bridge">The Bridge<a class="headerlink" href="#the-bridge" title="Permanent link">&para;</a></h3>
+<p><strong>Yesterday,</strong> we established <em>why</em> HSP-PCB matters (threat model, design principles).</p>
+<p><strong>Today,</strong> we translate that intent into <em>how</em> to build it (CAD, DFM, architecture).</p>
+<p><strong>Tomorrow,</strong> we verify it can be manufactured (PCB milling specifications).</p>
+<h3 id="key-insight">Key Insight<a class="headerlink" href="#key-insight" title="Permanent link">&para;</a></h3>
+<p><strong>Parametric design is sovereignty too.</strong></p>
+<p>When a design is parametric (form factor, trace width, constraints all defined as variables), anyone can:
+- <strong>Audit</strong> the design decisions (parameters are transparent)
+- <strong>Modify</strong> for their context (smaller form factor? Change one variable)
+- <strong>Reproduce</strong> consistently (same parameters → same output)</p>
+<p>This is how open-source hardware scales across communities.</p>
+<h3 id="challenge">Challenge<a class="headerlink" href="#challenge" title="Permanent link">&para;</a></h3>
+<p>The models we create today must be:
+- <strong>Verifiable</strong> — Every line and hole justified by threat model or DFM
+- <strong>Auditable</strong> — Git history shows why each design decision was made
+- <strong>Replicable</strong> — A technician in Rwanda, India, or Brazil can follow the same CAD file and fabricate the same device</p>
+<hr />
+<h2 id="resources">🔗 Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<h3 id="cad-tools">CAD Tools<a class="headerlink" href="#cad-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>FreeCAD:</strong> <a href="https://wiki.freecadweb.org/">freecadweb.org</a> (open-source 3D CAD)</li>
+<li><strong>KiCad:</strong> <a href="https://kicad.org/">kicad.org</a> (open-source PCB design)</li>
+<li><strong>Fusion 360:</strong> <a href="https://www.autodesk.com/products/fusion-360">autodesk.com/fusion</a> (CAM for toolpaths)</li>
+</ul>
+<h3 id="design-standards">Design Standards<a class="headerlink" href="#design-standards" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/ISO/IEC_7810">ISO/IEC 7810 (ID-1 Card Standard)</a></li>
+<li><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/nistfips140-2.pdf">NIST FIPS 140-2 (Cryptographic Module Validation)</a></li>
+<li><a href="https://www.ipc.org/standards/ipc-a-600">IPC-A-600 (PCB Acceptability)</a></li>
+</ul>
+<hr />
+<p><strong>Status:</strong> Day 2 Complete ✅<br />
+<strong>Next:</strong> Day 3 - PCB Milling &amp; Design for Manufacturability<br />
+<strong>Last Updated:</strong> January 31, 2026</p>
+<h2 id="course-overview">Course Overview<a class="headerlink" href="#course-overview" title="Permanent link">&para;</a></h2>
+<p>Digital modeling transforms design ideas into precise, fabrication-ready representations. Today I create the detailed CAD model for the <strong>CO3 nameplate project</strong>.</p>
+<hr />
+<h2 id="project-co3-nameplate-cad-design">Project: CO3 Nameplate CAD Design<a class="headerlink" href="#project-co3-nameplate-cad-design" title="Permanent link">&para;</a></h2>
+<h3 id="design-specifications">Design Specifications<a class="headerlink" href="#design-specifications" title="Permanent link">&para;</a></h3>
+<p><strong>Objective:</strong> Create a production-ready 3D model of the CO3 nameplate
+<strong>Software:</strong> FreeCAD (Part Design Workbench)
+<strong>Final Dimensions:</strong>
+- Outer oval: 150mm x 90mm
+- Base thickness: 10mm
+- Letter depth: 4mm (carved)
+- Letter height: "C" = 40mm, "O" = 38mm, "3" = 40mm
+- Border width: 12mm minimum</p>
+<hr />
+<h2 id="precision-modeling-and-scale-control">Precision Modeling and Scale Control<a class="headerlink" href="#precision-modeling-and-scale-control" title="Permanent link">&para;</a></h2>
+<h3 id="understanding-precision">Understanding Precision<a class="headerlink" href="#understanding-precision" title="Permanent link">&para;</a></h3>
+<p>For the CO3 nameplate, precision is critical because:
+- Letters must be legible and properly proportioned
+- CNC toolpaths depend on exact dimensions
+- Tolerances affect the final carved depth</p>
+<div class="admonition info">
+<p class="admonition-title">Key Principle</p>
+<p><strong>Every dimension in the CAD model directly translates to the physical nameplate.</strong> If I model the oval as 150mm wide, the CNC will cut it exactly 150mm wide.</p>
+</div>
+<h3 id="my-approach-to-precision-for-co3">My Approach to Precision for CO3<a class="headerlink" href="#my-approach-to-precision-for-co3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Use constraints:</strong> Applied dimensional constraints for exact oval shape (150mm x 90mm)</li>
+<li><strong>Work in millimeters:</strong> All measurements match final fabrication requirements</li>
+<li><strong>Verify letter spacing:</strong> Ensured proper visual balance between C, O, and 3</li>
+<li><strong>Consider tool radius:</strong> All internal corners have 2mm radius for 4mm end mill</li>
+</ul>
+<hr />
+<h2 id="design-for-manufacturing-dfm-applied-to-co3">Design for Manufacturing (DFM) Applied to CO3<a class="headerlink" href="#design-for-manufacturing-dfm-applied-to-co3" title="Permanent link">&para;</a></h2>
+<h3 id="dfm-principles-for-cnc-milling">DFM Principles for CNC Milling<a class="headerlink" href="#dfm-principles-for-cnc-milling" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">DFM for CO3 Nameplate</p>
+<p>"Letters must be machinable with available end mills, depth must be achievable without multiple tool changes, and the design must be efficient to fabricate."</p>
+</div>
+<h3 id="critical-dfm-decisions-for-co3-nameplate">Critical DFM Decisions for CO3 Nameplate<a class="headerlink" href="#critical-dfm-decisions-for-co3-nameplate" title="Permanent link">&para;</a></h3>
+<p><strong>1. Tool-Accessible Geometry</strong>
+- All internal letter corners: 2mm radius (matches 4mm end mill)
+- No sharp internal corners that would require special tooling
+- Letters designed with clearance for tool entry and exit</p>
+<p><strong>2. Carving Depth Strategy</strong>
+- Selected 4mm depth for optimal visibility
+- Deep enough for dramatic shadows and visual impact
+- Shallow enough for single-pass milling with appropriate feeds/speeds
+- Maintains structural integrity of 10mm base plate</p>
+<p><strong>3. Material Considerations</strong>
+- Base thickness (10mm) provides rigidity
+- Letter walls have 2° draft for easier milling
+- Surface area optimized for stable workholding during CNC</p>
+<hr />
+<h2 id="modeling-workflow-creating-the-co3-nameplate">Modeling Workflow: Creating the CO3 Nameplate<a class="headerlink" href="#modeling-workflow-creating-the-co3-nameplate" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-oval-base-creation">Step 1: Oval Base Creation<a class="headerlink" href="#step-1-oval-base-creation" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">1. Setup &amp; Sketch</label><label for="__tabbed_1_2">2. Padding (Extrusion)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>I started by creating a new <strong>Body</strong> in the Part Design Workbench and selected the <strong>XY Plane</strong>.</p>
+<ul>
+<li><strong>Tool:</strong> Ellipse <code>CreateEllipse</code></li>
+<li><strong>Action:</strong> Drew an ellipse centered at origin (0,0)</li>
+<li><strong>Constraints:</strong><ul>
+<li>Major axis (width): 150mm</li>
+<li>Minor axis (height): 90mm</li>
+<li>Centered at origin for symmetry</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Parametric Logic</p>
+<p>By fully constraining the ellipse, I ensure the oval shape remains perfect even if dimensions are later adjusted.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>Once the oval profile was defined, I extruded it to create the base plate.</p>
+<ul>
+<li><strong>Tool:</strong> Pad <code>PartDesign_Pad</code></li>
+<li><strong>Parameter:</strong> Length = 10mm (base thickness)</li>
+</ul>
+<p><a class="glightbox" href="../../images/day_2/Extruded%20Base.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Extruded Base - Precision Modeling" src="../../images/day_2/Extruded%20Base.png" /></a>
+<em>Extruded Base: Demonstrating precision modeling and parametric constraints in FreeCAD - the oval base with 10mm thickness showing dimensional accuracy</em>
+* <strong>Result:</strong> A solid 10mm thick oval base plate</p>
+</div>
+</div>
+</div>
+<hr />
+<h3 id="step-2-creating-letter-geometry">Step 2: Creating Letter Geometry<a class="headerlink" href="#step-2-creating-letter-geometry" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">3. Letter 'C' Sketch</label><label for="__tabbed_2_2">4. Letter 'O' Sketch</label><label for="__tabbed_2_3">5. Number '3' Sketch</label><label for="__tabbed_2_4">6. Carving the Letters (Pocket)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Created the letter C on the top face of the oval base.</p>
+<ol>
+<li><strong>Select Face:</strong> Top surface of oval base</li>
+<li><strong>Sketch Tool:</strong> Circles and arcs to form 'C' shape</li>
+<li><strong>Dimensions:</strong><ul>
+<li>Outer diameter: 40mm</li>
+<li>Inner diameter: 28mm (12mm stroke width)</li>
+<li>Opening gap: 15mm wide</li>
+</ul>
+</li>
+<li><strong>Position:</strong> Centered horizontally, upper third of oval</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Created the letter O below the C.</p>
+<ul>
+<li><strong>Outer diameter:</strong> 38mm</li>
+<li><strong>Inner diameter:</strong> 26mm (12mm stroke width)</li>
+<li><strong>Position:</strong> Middle section, 5mm gap from C</li>
+<li><strong>Constraint:</strong> Horizontally aligned with C</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Created the number 3 at the bottom.</p>
+<ul>
+<li><strong>Height:</strong> 40mm</li>
+<li><strong>Width:</strong> 24mm</li>
+<li><strong>Curves:</strong> Two semicircles with 12mm radius</li>
+<li><strong>Position:</strong> Lower third, 5mm gap from O</li>
+<li><strong>Constraint:</strong> Horizontally aligned with C and O</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Used the Pocket tool to carve all three letters into the base.</p>
+<ul>
+<li><strong>Tool:</strong> Pocket <code>PartDesign_Pocket</code></li>
+<li><strong>Depth:</strong> 4mm (removes material downward)</li>
+<li><strong>Important:</strong> Added 2mm fillet to all internal corners for tool clearance</li>
+<li><strong>Result:</strong> Letters carved 4mm deep into the oval base</li>
+</ul>
+</div>
+</div>
+</div>
+<hr />
+<h3 id="step-3-edge-refinement">Step 3: Edge Refinement<a class="headerlink" href="#step-3-edge-refinement" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">7. Outer Edge Chamfer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Added a subtle chamfer to the outer edge for professional appearance.</p>
+<ul>
+<li><strong>Tool:</strong> Chamfer <code>PartDesign_Chamfer</code></li>
+<li><strong>Angle:</strong> 45°</li>
+<li><strong>Distance:</strong> 1mm</li>
+<li><strong>Result:</strong> Smooth transition from base to edges</li>
+</ul>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="fabrication-considerations-for-co3-nameplate">Fabrication Considerations for CO3 Nameplate<a class="headerlink" href="#fabrication-considerations-for-co3-nameplate" title="Permanent link">&para;</a></h2>
+<h3 id="design-validation-checklist">Design Validation Checklist<a class="headerlink" href="#design-validation-checklist" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Specification</th>
+<th style="text-align: left;">Fabrication Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Oval Dimensions</strong></td>
+<td style="text-align: left;">150mm x 90mm</td>
+<td style="text-align: left;">Fits standard sheet materials, easy to clamp</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Base Thickness</strong></td>
+<td style="text-align: left;">10mm</td>
+<td style="text-align: left;">Provides rigidity, accommodates 4mm carving depth</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Letter Depth</strong></td>
+<td style="text-align: left;">4mm carved</td>
+<td style="text-align: left;">Creates strong shadows, visible from distance</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Corner Radii</strong></td>
+<td style="text-align: left;">2mm minimum</td>
+<td style="text-align: left;">Matches 4mm end mill, prevents tool breakage</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Letter Stroke</strong></td>
+<td style="text-align: left;">12mm width</td>
+<td style="text-align: left;">Ensures letters remain strong after carving</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Edge Chamfer</strong></td>
+<td style="text-align: left;">1mm x 45°</td>
+<td style="text-align: left;">Prevents sharp edges, professional finish</td>
+</tr>
+</tbody>
+</table>
+<h3 id="material-considerations">Material Considerations<a class="headerlink" href="#material-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tested Materials:</strong> Plywood, hardwood (maple/walnut), aluminum</li>
+<li><strong>Final Selection:</strong> To be determined after material testing (Day 4)</li>
+<li><strong>Clamping Strategy:</strong> Vacuum table or double-sided tape for secure holding</li>
+</ul>
+<hr />
+<h2 id="file-formats-for-digital-fabrication">File Formats for Digital Fabrication<a class="headerlink" href="#file-formats-for-digital-fabrication" title="Permanent link">&para;</a></h2>
+<h3 id="exporting-co3-nameplate-for-different-processes">Exporting CO3 Nameplate for Different Processes<a class="headerlink" href="#exporting-co3-nameplate-for-different-processes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Purpose</th>
+<th>Export Settings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>STEP</strong></td>
+<td>CNC CAM programming</td>
+<td>Solid body, all features preserved</td>
+</tr>
+<tr>
+<td><strong>STL</strong></td>
+<td>3D printed prototype (Day 6)</td>
+<td>Resolution: 0.1mm, binary format</td>
+</tr>
+<tr>
+<td><strong>DXF</strong></td>
+<td>Laser cut test template (Day 5)</td>
+<td>Top view projection, 2D outline only</td>
+</tr>
+<tr>
+<td><strong>3MF</strong></td>
+<td>Alternative 3D print format</td>
+<td>Color and material data included</td>
+</tr>
+</tbody>
+</table>
+<h3 id="export-process-from-freecad">Export Process from FreeCAD<a class="headerlink" href="#export-process-from-freecad" title="Permanent link">&para;</a></h3>
+<p><strong>For CNC Milling (STEP):</strong>
+1. Select the Body
+2. File → Export → STEP format
+3. Save as: <code>CO3_Nameplate_v1.step</code>
+4. Verify: Open in CAM software to confirm geometry</p>
+<p><strong>For 3D Printing (STL):</strong>
+1. Select the Body
+2. File → Export → STL format
+3. Settings: Binary, 0.1mm deviation
+4. Save as: <code>CO3_Nameplate_prototype.stl</code>
+5. Import into slicer (Cura) for validation</p>
+<p><strong>For Laser Test (DXF):</strong>
+1. Create sketch on XY plane
+2. Project outer oval outline
+3. Export sketch as DXF
+4. Save as: <code>CO3_Outline_template.dxf</code></p>
+<hr />
+<h2 id="precision-measurements">Precision Measurements<a class="headerlink" href="#precision-measurements" title="Permanent link">&para;</a></h2>
+<h3 id="dimensional-verification">Dimensional Verification<a class="headerlink" href="#dimensional-verification" title="Permanent link">&para;</a></h3>
+<p>After completing the CAD model, I verified all critical dimensions:</p>
+<ul>
+<li>Oval width: 150.00mm ± 0.1mm</li>
+<li>Oval height: 90.00mm ± 0.1mm</li>
+<li>Base thickness: 10.00mm</li>
+<li>Letter C height: 40.00mm</li>
+<li>Letter O height: 38.00mm</li>
+<li>Number 3 height: 40.00mm</li>
+<li>Carving depth: 4.00mm</li>
+<li>Internal corner radii: 2.00mm (all corners)</li>
+<li>Letter spacing: 5.00mm between each character</li>
+</ul>
+<hr />
+<h2 id="reflection">Reflection<a class="headerlink" href="#reflection" title="Permanent link">&para;</a></h2>
+<h3 id="day-2-achievements">Day 2 Achievements<a class="headerlink" href="#day-2-achievements" title="Permanent link">&para;</a></h3>
+<p>Today I successfully created a production-ready 3D CAD model of the CO3 nameplate with:
+- Precise oval base geometry (150mm x 90mm x 10mm)
+- Three carved letters (C, O, 3) with 4mm depth
+- All internal corners properly radiused for CNC milling
+- Professional edge chamfer for finished appearance
+- Multiple file formats exported for different fabrication methods</p>
+<h3 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Parametric constraints enable rapid iteration</strong> - If dimensions need adjustment, constraints maintain design intent</li>
+<li><strong>DFM thinking from the start saves time</strong> - Adding corner radii during modeling prevents CAM headaches later</li>
+<li><strong>File format selection depends on fabrication method</strong> - STEP for CNC, STL for 3D printing, DXF for laser cutting</li>
+<li><strong>Dimensional verification prevents errors</strong> - Double-checking measurements before export ensures fabrication success</li>
+<li><strong>Professional details matter</strong> - Small touches like edge chamfers elevate the final appearance</li>
+</ol>
+<h3 id="challenges-overcome">Challenges Overcome<a class="headerlink" href="#challenges-overcome" title="Permanent link">&para;</a></h3>
+<p><strong>Challenge 1:</strong> Creating smooth letter curves
+<strong>Solution:</strong> Used combination of circles and arcs with tangent constraints</p>
+<p><strong>Challenge 2:</strong> Ensuring consistent letter stroke width
+<strong>Solution:</strong> Applied parametric dimensions (12mm) to all letter elements</p>
+<p><strong>Challenge 3:</strong> Previewing carving depth visually
+<strong>Solution:</strong> Used FreeCAD's section view to verify 4mm depth looks correct</p>
+<hr />
+<h2 id="cad-design-gallery">CAD Design Gallery<a class="headerlink" href="#cad-design-gallery" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../../images/day_2/Extruded%20Base.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Extruded Base - Precision Modeling" src="../../images/day_2/Extruded%20Base.png" /></a>
+<em>Extruded Base: Demonstrating precision modeling and parametric constraints in FreeCAD</em></p>
+<hr />
+<h3 id="next-steps-for-day-3">Next Steps for Day 3<a class="headerlink" href="#next-steps-for-day-3" title="Permanent link">&para;</a></h3>
+<p>While Day 3 typically focuses on PCB design, for the CO3 project I will:
+- Conduct dimensional verification using digital calipers techniques
+- Create detailed technical drawings with dimensions
+- Generate quality control documentation
+- Prepare measurement protocols for validating the final fabricated piece</p>
+<p>This session reinforced that <strong>digital modeling is not just about creating shapes—it's about creating manufacturable designs</strong>. Every decision, from geometry to file format, impacts the final fabricated object.</p>
+<h3 id="key-takeaways_1">Key Takeaways<a class="headerlink" href="#key-takeaways_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Design with fabrication in mind from the start</strong></li>
+<li><strong>Tolerances are essential, not optional</strong></li>
+<li><strong>File format selection impacts fabrication success</strong></li>
+<li><strong>DFM principles save time, materials, and money</strong></li>
+<li><strong>Parametric modeling enables rapid iteration</strong></li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../day_1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Day 1 - Foundations &amp; Problem Statement">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Day 1 - Foundations & Problem Statement
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../day_3/" class="md-footer__link md-footer__link--next" aria-label="Next: Day 3 - PCB Milling &amp; Design for Manufacturability">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Day 3 - PCB Milling & Design for Manufacturability
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2026 Ernest Nkunzimana - Creative Commons Attribution Non-commercial
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ernestonkunzimana" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/ernestonkunzimana" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ernestonkunzimana" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.footer", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

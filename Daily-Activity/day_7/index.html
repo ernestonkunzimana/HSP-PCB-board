@@ -1,0 +1,3235 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HSP-PCB Board - Human-Sovereign Privacy & Security PCB - A 9-Day Digital Fabrication & Systems Design Journey">
+      
+      
+        <meta name="author" content="Ernest Nkunzimana">
+      
+      
+        <link rel="canonical" href="https://ernestonkunzimana.github.io/HSP-PCB-board/Daily-Activity/day_7/">
+      
+      
+        <link rel="prev" href="../day_6/">
+      
+      
+        <link rel="next" href="../day_8/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Day 7 - CNC Router Milling & Integration - Ernest Nkunzimana-ACEIoT-WISENeT</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#day-7-cnc-router-milling-integration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Ernest Nkunzimana-ACEIoT-WISENeT" class="md-header__button md-logo" aria-label="Ernest Nkunzimana-ACEIoT-WISENeT" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ernest Nkunzimana-ACEIoT-WISENeT
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Day 7 - CNC Router Milling & Integration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ernestonkunzimana/HSP-PCB-board" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HSP-PCB-board
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Daily Course Activities
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ernest Nkunzimana-ACEIoT-WISENeT" class="md-nav__button md-logo" aria-label="Ernest Nkunzimana-ACEIoT-WISENeT" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ernest Nkunzimana-ACEIoT-WISENeT
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ernestonkunzimana/HSP-PCB-board" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HSP-PCB-board
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Course Activities
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Daily Course Activities
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 1 - Foundations & Problem Statement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 2 - Digital Modeling & Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 3 - PCB Milling & Design for Manufacturability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 4 - Materials & Environmental Constraints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 5 - CNC & Laser Cutting (Enclosure Design)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 6 - Additive Manufacturing & Prototyping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 7 - CNC Router Milling & Integration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 7 - CNC Router Milling & Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modular-integration-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Modular Integration Strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗️ Modular Integration Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-solution-standardized-mounting-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Solution: Standardized Mounting Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnc-router-fabrication-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ CNC Router: Fabrication at Scale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ CNC Router: Fabrication at Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#router-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Router Specifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hsp-pcb-modular-mounting-bracket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HSP-PCB Modular Mounting Bracket
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutting-program-g-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cutting Program (G-Code)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vehicle-integration-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚗 Vehicle Integration Example
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚗 Vehicle Integration Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obd-ii-port-mount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OBD-II Port Mount
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-home-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏠 Smart Home Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏠 Smart Home Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wall-mount-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wall-Mount Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Production Scaling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Production Scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#router-batch-cutting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Router Batch Cutting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Assembly &amp; Testing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Assembly &amp; Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sub-assembly-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sub-Assembly Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#day-7-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Day 7 Deliverables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#co3-cnc-milling-from-digital-to-physical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CO3 CNC Milling: From Digital to Physical
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CO3 CNC Milling: From Digital to Physical">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-cnc-for-the-final-piece" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why CNC for the Final Piece?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnc-router-components-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC Router Components &amp; Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CNC Router Components &amp; Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#machine-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Machine Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cam-workflow-co3-step-file-g-code-toolpaths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAM Workflow: CO3 STEP File → G-code Toolpaths
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CAM Workflow: CO3 STEP File → G-code Toolpaths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-import-co3-model-into-fusion-360-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Import CO3 Model into Fusion 360 CAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-toolpath-strategy-for-co3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Toolpath Strategy for CO3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Toolpath Strategy for CO3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roughing-pass-clear-material-quickly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roughing Pass – Clear Material Quickly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finishing-pass-create-smooth-surfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finishing Pass – Create Smooth Surfaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-pass-cut-outer-oval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile Pass – Cut Outer Oval
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-simulation-collision-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Simulation &amp; Collision Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-cnc-safety-setup-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-CNC Safety &amp; Setup Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-CNC Safety &amp; Setup Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-preparation-walnut-blank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Preparation: Walnut Blank
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-loading-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Loading &amp; Calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnc-milling-execution-creating-the-co3-nameplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC Milling Execution: Creating the CO3 Nameplate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CNC Milling Execution: Creating the CO3 Nameplate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-roughing-pass-000-018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Roughing Pass (0:00 - 0:18)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-tool-change-to-ball-nose-018-020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Tool Change to Ball Nose (0:18 - 0:20)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-finishing-pass-020-035" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Finishing Pass (0:20 - 0:35)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-oval-profile-cut-035-042" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Oval Profile Cut (0:35 - 0:42)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-cnc-processing-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-CNC Processing &amp; Inspection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-CNC Processing &amp; Inspection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part Removal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensional-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensional Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#surface-quality-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Surface Quality Inspection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnc-vs-other-fabrication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC vs. Other Fabrication Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CNC vs. Other Fabrication Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#co3-fabrication-method-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CO3 Fabrication Method Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection &amp; Lessons Learned
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reflection &amp; Lessons Learned">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-mastery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Mastery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-validation-through-prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Validation Through Prototyping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomorrow-finishing-enhancement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tomorrow: Finishing &amp; Enhancement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources &amp; Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources &amp; Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nesting-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nesting &amp; Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-design-for-cnc-fabrication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Design for CNC Fabrication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Design for CNC Fabrication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-practical-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Practical Application
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Practical Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-cnc-project-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My CNC Project Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reflection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-lessons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Lessons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-internal-corner-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "Internal Corner" Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tolerances-press-fit-joinery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tolerances &amp; Press-Fit Joinery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-assembly-structural-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Assembly &amp; Structural Evaluation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 8 - Molding & Casting Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day_9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 9 - Final Fabrication & Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modular-integration-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Modular Integration Strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗️ Modular Integration Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-solution-standardized-mounting-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Solution: Standardized Mounting Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnc-router-fabrication-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ CNC Router: Fabrication at Scale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ CNC Router: Fabrication at Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#router-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Router Specifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hsp-pcb-modular-mounting-bracket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HSP-PCB Modular Mounting Bracket
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutting-program-g-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cutting Program (G-Code)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vehicle-integration-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚗 Vehicle Integration Example
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚗 Vehicle Integration Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obd-ii-port-mount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OBD-II Port Mount
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-home-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏠 Smart Home Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏠 Smart Home Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wall-mount-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wall-Mount Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Production Scaling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Production Scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#router-batch-cutting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Router Batch Cutting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Assembly &amp; Testing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Assembly &amp; Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sub-assembly-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sub-Assembly Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#day-7-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Day 7 Deliverables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#co3-cnc-milling-from-digital-to-physical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CO3 CNC Milling: From Digital to Physical
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CO3 CNC Milling: From Digital to Physical">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-cnc-for-the-final-piece" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why CNC for the Final Piece?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnc-router-components-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC Router Components &amp; Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CNC Router Components &amp; Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#machine-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Machine Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cam-workflow-co3-step-file-g-code-toolpaths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CAM Workflow: CO3 STEP File → G-code Toolpaths
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CAM Workflow: CO3 STEP File → G-code Toolpaths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-import-co3-model-into-fusion-360-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Import CO3 Model into Fusion 360 CAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-toolpath-strategy-for-co3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Toolpath Strategy for CO3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Toolpath Strategy for CO3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roughing-pass-clear-material-quickly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roughing Pass – Clear Material Quickly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finishing-pass-create-smooth-surfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finishing Pass – Create Smooth Surfaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-pass-cut-outer-oval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile Pass – Cut Outer Oval
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-simulation-collision-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Simulation &amp; Collision Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-cnc-safety-setup-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-CNC Safety &amp; Setup Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-CNC Safety &amp; Setup Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-preparation-walnut-blank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material Preparation: Walnut Blank
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-loading-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Loading &amp; Calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnc-milling-execution-creating-the-co3-nameplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC Milling Execution: Creating the CO3 Nameplate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CNC Milling Execution: Creating the CO3 Nameplate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-roughing-pass-000-018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Roughing Pass (0:00 - 0:18)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-tool-change-to-ball-nose-018-020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Tool Change to Ball Nose (0:18 - 0:20)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-finishing-pass-020-035" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Finishing Pass (0:20 - 0:35)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-oval-profile-cut-035-042" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Oval Profile Cut (0:35 - 0:42)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-cnc-processing-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-CNC Processing &amp; Inspection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-CNC Processing &amp; Inspection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part Removal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensional-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensional Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#surface-quality-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Surface Quality Inspection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnc-vs-other-fabrication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CNC vs. Other Fabrication Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CNC vs. Other Fabrication Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#co3-fabrication-method-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CO3 Fabrication Method Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection &amp; Lessons Learned
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reflection &amp; Lessons Learned">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-mastery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Mastery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-validation-through-prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Validation Through Prototyping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomorrow-finishing-enhancement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tomorrow: Finishing &amp; Enhancement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources &amp; Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources &amp; Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nesting-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nesting &amp; Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-design-for-cnc-fabrication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Design for CNC Fabrication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Design for CNC Fabrication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-practical-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Practical Application
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Practical Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-cnc-project-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My CNC Project Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reflection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-lessons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Lessons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-internal-corner-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "Internal Corner" Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tolerances-press-fit-joinery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tolerances &amp; Press-Fit Joinery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-assembly-structural-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Assembly &amp; Structural Evaluation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="day-7-cnc-router-milling-integration">Day 7 - CNC Router Milling &amp; Integration<a class="headerlink" href="#day-7-cnc-router-milling-integration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">📌 Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><strong>Focus:</strong> Large-scale integration, modular attachment design, router-cut prototypes.</p>
+<p><strong>Context:</strong> HSP-PCB must integrate into vehicles, homes, industrial IoT systems → needs standardized mounting.</p>
+<hr />
+<h2 id="modular-integration-strategy">🏗️ Modular Integration Strategy<a class="headerlink" href="#modular-integration-strategy" title="Permanent link">&para;</a></h2>
+<h3 id="the-problem">The Problem<a class="headerlink" href="#the-problem" title="Permanent link">&para;</a></h3>
+<p>HSP-PCB is small &amp; portable, but how does it physically integrate into:
+- <strong>Vehicles</strong> (dashboard mount, under-seat placement)
+- <strong>Smart Homes</strong> (wall panel, gateway enclosure)
+- <strong>Wearables</strong> (body-worn pouch, backpack clip)
+- <strong>Industrial IoT</strong> (DIN rail mount, panel insert)</p>
+<h3 id="the-solution-standardized-mounting-interface">The Solution: Standardized Mounting Interface<a class="headerlink" href="#the-solution-standardized-mounting-interface" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>HSP-PCB Core Module (85×54 mm, 2.5 mm)
+          ↓
+    ┌─────────────────┐
+    │  ¼-20 Threads  │  (4× on sides)
+    │  (attachment   │
+    │   points)      │
+    └─────────────────┘
+          ↓
+    ┌──────┬──────┬──────┐
+    │      │      │      │
+  VEHICLE HOME WEARABLE INDUSTRIAL
+   Mount  Panel  Clip    Bracket
+</code></pre></div>
+<hr />
+<h2 id="cnc-router-fabrication-at-scale">🛠️ CNC Router: Fabrication at Scale<a class="headerlink" href="#cnc-router-fabrication-at-scale" title="Permanent link">&para;</a></h2>
+<h3 id="router-specifications">Router Specifications<a class="headerlink" href="#router-specifications" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Capability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Machine</strong></td>
+<td>ShopBot PRT/4 (4×8 ft table)</td>
+</tr>
+<tr>
+<td><strong>Spindle Speed</strong></td>
+<td>6,000–24,000 RPM</td>
+</tr>
+<tr>
+<td><strong>Cutting Area</strong></td>
+<td>4 ft × 8 ft (1.2 m × 2.4 m)</td>
+</tr>
+<tr>
+<td><strong>Tool Library</strong></td>
+<td>½", ¼", ⅛" end mills; V-groove bits</td>
+</tr>
+<tr>
+<td><strong>Material</strong></td>
+<td>Wood, plastic, aluminum composites</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hsp-pcb-modular-mounting-bracket">HSP-PCB Modular Mounting Bracket<a class="headerlink" href="#hsp-pcb-modular-mounting-bracket" title="Permanent link">&para;</a></h3>
+<p><strong>Application:</strong> Vehicle OBD-II port integration</p>
+<p><strong>Material:</strong> Delrin (acetal copolymer)
+- <strong>Cost:</strong> ~$8/part
+- <strong>Machinability:</strong> Excellent (smooth finish)
+- <strong>Durability:</strong> 20+ years
+- <strong>Environmental:</strong> Recyclable</p>
+<p><strong>Design:</strong>
+<div class="highlight"><pre><span></span><code>Delrin Bracket (120 × 80 × 15 mm):
+  • HSP-PCB socket (spring-loaded)
+  • ¼-20 threaded insert (attach to vehicle)
+  • Cable pass-through (I2C/power)
+  • Tamper-evident security screw
+</code></pre></div></p>
+<h3 id="cutting-program-g-code">Cutting Program (G-Code)<a class="headerlink" href="#cutting-program-g-code" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c">; CNC Router: HSP-PCB Mounting Bracket</span>
+<span class="nb">G28 </span>Z  ; Home Z axis
+<span class="nb">G0 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Y</span><span class="m">0</span><span class="w">  </span><span class="c">; Move to origin</span>
+<span class="nb">G0 </span><span class="k">Z</span><span class="m">5</span><span class="w">  </span><span class="c">; Clear table</span>
+
+<span class="c">; Pocket for HSP-PCB socket</span>
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">-5</span><span class="w"> </span><span class="k">F</span><span class="m">100</span><span class="w">  </span><span class="c">; Plunge ½&quot; depth</span>
+<span class="nb">G1 </span><span class="k">X</span><span class="m">85</span><span class="w"> </span><span class="k">F</span><span class="m">50</span><span class="w">   </span><span class="c">; Rout to X position</span>
+... [detailed tool path] ...
+
+<span class="c">; Drill ¼-20 threaded insert hole</span>
+<span class="nb">G81 </span><span class="k">X</span><span class="m">50</span><span class="w"> </span><span class="k">Y</span><span class="m">50</span><span class="w"> </span><span class="k">Z</span><span class="m">-6</span><span class="w"> </span><span class="k">R</span><span class="m">2</span><span class="w">  </span><span class="c">; Canned drill cycle</span>
+... [additional operations] ...
+
+<span class="nb">M30 </span><span class="w"> </span><span class="c">; End program</span>
+</code></pre></div>
+<hr />
+<h2 id="vehicle-integration-example">🚗 Vehicle Integration Example<a class="headerlink" href="#vehicle-integration-example" title="Permanent link">&para;</a></h2>
+<h3 id="obd-ii-port-mount">OBD-II Port Mount<a class="headerlink" href="#obd-ii-port-mount" title="Permanent link">&para;</a></h3>
+<p><strong>Context:</strong> HSP-PCB as vehicle security module</p>
+<div class="highlight"><pre><span></span><code>Vehicle OBD-II Port (standard ISO)
+        ↓
+   Delrin Bracket (CNC-routed)
+        ↓
+   HSP-PCB mounted
+        ↓
+  I2C to vehicle CAN bus
+        ↓
+  Verify VIN &amp; detect tampering
+</code></pre></div>
+<h3 id="wiring">Wiring<a class="headerlink" href="#wiring" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>OBD Connector:
+  Pin 16 (12V) ──┐
+                 ├→ [Fuse] → HSP-PCB Power
+  Pin 4 (GND) ──┘
+
+  Pin 6 (CAN-H)  → [Optocoupler] → I2C Bridge
+  Pin 14 (CAN-L) ─→
+</code></pre></div>
+<hr />
+<h2 id="smart-home-integration">🏠 Smart Home Integration<a class="headerlink" href="#smart-home-integration" title="Permanent link">&para;</a></h2>
+<h3 id="wall-mount-gateway">Wall-Mount Gateway<a class="headerlink" href="#wall-mount-gateway" title="Permanent link">&para;</a></h3>
+<p><strong>CNC-Routed Housing (Acrylic, 200×150×50 mm)</strong></p>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────┐
+│  Smart Home Gateway     │
+├─────────────────────────┤
+│                         │
+│  [HSP-PCB Core]  ↑      │
+│  [Mesh Radio]    │ Mounted
+│  [Ethernet PHY]  │ on internal
+│                  │ rail
+├─────────────────────────┤
+│ ¼-20 bracket (wall)     │
+└─────────────────────────┘
+</code></pre></div>
+<p><strong>Router Program Features:</strong>
+- Internal shelf for PCB mounting
+- Cable routing grooves
+- Fan cutout (thermal management)
+- Front-panel cable pass-throughs</p>
+<hr />
+<h2 id="production-scaling">📊 Production Scaling<a class="headerlink" href="#production-scaling" title="Permanent link">&para;</a></h2>
+<h3 id="router-batch-cutting">Router Batch Cutting<a class="headerlink" href="#router-batch-cutting" title="Permanent link">&para;</a></h3>
+<p><strong>Setup:</strong> 1 × 4 ft Delrin stock → 12 brackets per sheet</p>
+<p><strong>Process:</strong>
+1. Import CAD → CAM software (VCarve, ShopBot)
+2. Nest parts (optimize material waste)
+3. Export G-code
+4. Load stock, zero router
+5. Run program (~15 min per batch)
+6. Remove parts, inspect
+7. Repeat (20 batches = 240 brackets in 1 production run)</p>
+<p><strong>Cost Analysis:</strong>
+- Material: $80/batch
+- Labor: 1 hour operator + 5 hours prep = $120
+- <strong>Unit cost:</strong> ($80 + $120) / 12 = <strong>~$17/bracket</strong></p>
+<hr />
+<h2 id="assembly-testing">🔧 Assembly &amp; Testing<a class="headerlink" href="#assembly-testing" title="Permanent link">&para;</a></h2>
+<h3 id="sub-assembly-process">Sub-Assembly Process<a class="headerlink" href="#sub-assembly-process" title="Permanent link">&para;</a></h3>
+<p><strong>Time per unit:</strong> ~10 minutes</p>
+<ol>
+<li>Insert spring in socket (HSP-PCB mounting)</li>
+<li>Press ¼-20 threaded insert</li>
+<li>Solder I2C header connector</li>
+<li>Hot-melt glue cable (strain relief)</li>
+<li>Test continuity (continuity meter)</li>
+<li>Apply security screw (Loctite)</li>
+</ol>
+<hr />
+<h2 id="day-7-deliverables">✅ Day 7 Deliverables<a class="headerlink" href="#day-7-deliverables" title="Permanent link">&para;</a></h2>
+<p>✅ <strong>Router CAM Program</strong> (G-code for mounting brackets)<br />
+✅ <strong>Integration Diagrams</strong> (vehicle, home, industrial)<br />
+✅ <strong>Assembly Manual</strong> (step-by-step sub-assembly)<br />
+✅ <strong>Cost Analysis</strong> (material + labor at scale)<br />
+✅ <strong>Test Protocol</strong> (electrical &amp; mechanical validation)  </p>
+<hr />
+<h2 id="resources">🔗 Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>CNC Router CAM:</strong> <a href="https://www.vectric.com/products/vcarve-pro">VCarve Pro</a></li>
+<li><strong>G-Code Reference:</strong> <a href="https://new.siemens.com/">Siemens Manufacturing</a></li>
+<li><strong>Delrin Material:</strong> <a href="https://www.dupont.com/">DuPont Engineering Polymers</a></li>
+</ul>
+<hr />
+<p><strong>Status:</strong> Day 7 ✅ | <strong>Next:</strong> Day 8 - Molding &amp; Casting Processes</p>
+<h2 id="course-overview">Course Overview<a class="headerlink" href="#course-overview" title="Permanent link">&para;</a></h2>
+<p>Today is the most critical day: <strong>CNC milling the final CO3 nameplate in walnut hardwood.</strong> After weeks of design, validation, and prototyping, it's time to create the real thing.</p>
+<hr />
+<h2 id="co3-cnc-milling-from-digital-to-physical">CO3 CNC Milling: From Digital to Physical<a class="headerlink" href="#co3-cnc-milling-from-digital-to-physical" title="Permanent link">&para;</a></h2>
+<h3 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">&para;</a></h3>
+<p>Mill the final CO3 nameplate with:
+- Material: Walnut hardwood (150mm × 90mm × 10mm blank)
+- Precision: ±0.1mm tolerance
+- Surface finish: Tool marks &lt;0.05mm (smooth enough for sanding)
+- Letter depth: Exactly 4mm as designed</p>
+<h3 id="why-cnc-for-the-final-piece">Why CNC for the Final Piece?<a class="headerlink" href="#why-cnc-for-the-final-piece" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">CNC Advantages for CO3</p>
+<ul>
+<li><strong>Precision:</strong> 0.01mm repeatability (vs. hand carving's ±2mm)</li>
+<li><strong>Smooth finish:</strong> 18,000 RPM cuts leave glass-like surfaces</li>
+<li><strong>Walnut-safe:</strong> Controlled feeds prevent tearout/splitting</li>
+<li><strong>Reproducible:</strong> Can make multiple identical CO3 nameplates</li>
+<li><strong>Complex curves:</strong> Oval and letter curves cut perfectly</li>
+</ul>
+</div>
+<p><strong>3D Printing vs. CNC:</strong>
+- Prototype (Day 6): 3D printed PLA validates design ($2, 3 hours)
+- Final (Day 7): CNC milled walnut creates premium product ($20, 45 min)</p>
+<hr />
+<h2 id="cnc-router-components-setup">CNC Router Components &amp; Setup<a class="headerlink" href="#cnc-router-components-setup" title="Permanent link">&para;</a></h2>
+<h3 id="machine-architecture">Machine Architecture<a class="headerlink" href="#machine-architecture" title="Permanent link">&para;</a></h3>
+<p><strong>Shopbot / 3-Axis CNC Router:</strong>
+- <strong>X-Axis:</strong> 1200mm travel (left/right)
+- <strong>Y-Axis:</strong> 900mm travel (front/back)
+- <strong>Z-Axis:</strong> 150mm travel (up/down)
+- <strong>Spindle:</strong> 2.2kW spindle, 0-24,000 RPM variable speed
+- <strong>Positioning:</strong> Stepper motors with 0.01mm resolution
+- <strong>Bed:</strong> MDF spoilboard (sacrificial surface)</p>
+<p><strong>Key Components:</strong>
+- <strong>Collet:</strong> ER20 collet holds 6mm and 4mm endmills
+- <strong>Dust Collection:</strong> 100mm hose removes walnut chips
+- <strong>Emergency Stop:</strong> Large red button (always accessible!)
+- <strong>Control Software:</strong> Mach3 or GRBL for G-code execution</p>
+<hr />
+<h2 id="cam-workflow-co3-step-file-g-code-toolpaths">CAM Workflow: CO3 STEP File → G-code Toolpaths<a class="headerlink" href="#cam-workflow-co3-step-file-g-code-toolpaths" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-import-co3-model-into-fusion-360-cam">Step 1: Import CO3 Model into Fusion 360 CAM<a class="headerlink" href="#step-1-import-co3-model-into-fusion-360-cam" title="Permanent link">&para;</a></h3>
+<p><strong>File Import:</strong>
+<div class="highlight"><pre><span></span><code>File → Open → CO3_Nameplate.step
+</code></pre></div></p>
+<p>From Day 2's FreeCAD export, the STEP file contains:
+- Oval base body (150mm × 90mm × 10mm)
+- Letter pockets (C, O, 3) at 4mm depth
+- 2mm corner radii throughout</p>
+<p><a class="glightbox" href="../../images/day_7/Letter%20Sketching.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Letter Sketching - Geometry for Toolpaths" src="../../images/day_7/Letter%20Sketching.png" /></a>
+<em>Letter Sketching: Emphasizing how letter geometry respects toolpaths and router constraints - the design shows careful consideration of tool radius and carving depth for CNC milling</em></p>
+<p><strong>Manufacturing Setup:</strong>
+- Create new CAM workspace
+- Set machine: Generic 3-axis router
+- Material: Walnut hardwood
+- Stock size: 160mm × 100mm × 12mm (slight oversizing)
+- Model position: Centered, top face at Z=0</p>
+<h3 id="step-2-toolpath-strategy-for-co3">Step 2: Toolpath Strategy for CO3<a class="headerlink" href="#step-2-toolpath-strategy-for-co3" title="Permanent link">&para;</a></h3>
+<h4 id="roughing-pass-clear-material-quickly">Roughing Pass – Clear Material Quickly<a class="headerlink" href="#roughing-pass-clear-material-quickly" title="Permanent link">&para;</a></h4>
+<p><strong>Tool:</strong> 6mm Flat End Mill (2-flute carbide)<br />
+<strong>Operation:</strong> Adaptive clearing (pocketing)</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Target Depth</strong></td>
+<td>-4mm</td>
+<td>Letter pocket depth</td>
+</tr>
+<tr>
+<td><strong>Stepdown</strong></td>
+<td>1mm per pass</td>
+<td>Safe for walnut, prevents tool breakage</td>
+</tr>
+<tr>
+<td><strong>Stepover</strong></td>
+<td>50% (3mm)</td>
+<td>Efficient material removal</td>
+</tr>
+<tr>
+<td><strong>Feed Rate</strong></td>
+<td>800mm/min</td>
+<td>Moderate speed for hardwood</td>
+</tr>
+<tr>
+<td><strong>Spindle Speed</strong></td>
+<td>18,000 RPM</td>
+<td>High speed for clean cuts</td>
+</tr>
+<tr>
+<td><strong>Ramp Entry</strong></td>
+<td>Helical</td>
+<td>Gradual entry prevents plunging damage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Roughing clears:</strong>
+- 90% of letter pocket material
+- Leaves 0.5mm stock for finishing pass
+- Cuts in 4 passes (1mm each)</p>
+<h4 id="finishing-pass-create-smooth-surfaces">Finishing Pass – Create Smooth Surfaces<a class="headerlink" href="#finishing-pass-create-smooth-surfaces" title="Permanent link">&para;</a></h4>
+<p><strong>Tool:</strong> 4mm Ball Nose End Mill (2-flute)<br />
+<strong>Operation:</strong> 3D contour finishing</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stepdown</strong></td>
+<td>0.25mm</td>
+<td>Ultra-fine for smooth walls</td>
+</tr>
+<tr>
+<td><strong>Stepover</strong></td>
+<td>0.2mm</td>
+<td>Remove all tool marks</td>
+</tr>
+<tr>
+<td><strong>Feed Rate</strong></td>
+<td>600mm/min</td>
+<td>Slower for surface quality</td>
+</tr>
+<tr>
+<td><strong>Spindle Speed</strong></td>
+<td>20,000 RPM</td>
+<td>Higher RPM = smoother finish</td>
+</tr>
+<tr>
+<td><strong>Tolerance</strong></td>
+<td>0.01mm</td>
+<td>Match letter curves precisely</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Finishing creates:</strong>
+- Glass-smooth letter walls and bottoms
+- Sharp transitions at 2mm corner radii
+- &lt;0.05mm tool marks (sands easily)</p>
+<h4 id="profile-pass-cut-outer-oval">Profile Pass – Cut Outer Oval<a class="headerlink" href="#profile-pass-cut-outer-oval" title="Permanent link">&para;</a></h4>
+<p><strong>Tool:</strong> 6mm Flat End Mill (same as roughing)<br />
+<strong>Operation:</strong> 2D contour (full depth)</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Total Depth</strong></td>
+<td>-11mm</td>
+<td>Cut through 10mm + 1mm into spoilboard</td>
+</tr>
+<tr>
+<td><strong>Stepdown</strong></td>
+<td>2mm per pass</td>
+<td>Faster for through-cuts</td>
+</tr>
+<tr>
+<td><strong>Feed Rate</strong></td>
+<td>800mm/min</td>
+<td>Standard walnut speed</td>
+</tr>
+<tr>
+<td><strong>Tabs</strong></td>
+<td>4 tabs × 3mm wide</td>
+<td>Hold part until cut completes</td>
+</tr>
+<tr>
+<td><strong>Lead-in</strong></td>
+<td>Arc entry</td>
+<td>Prevent witness marks</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Profile cuts:</strong>
+- 6 passes at 2mm each
+- Leaves 4 small tabs holding CO3 to stock
+- Cuts slightly into spoilboard (protects bottom face)</p>
+<h3 id="step-3-simulation-collision-detection">Step 3: Simulation &amp; Collision Detection<a class="headerlink" href="#step-3-simulation-collision-detection" title="Permanent link">&para;</a></h3>
+<p><strong>Fusion 360 Simulation:</strong>
+- Play toolpath animation (verify no crashes)
+- Check stock removal visualization (all pockets cleared?)
+- Validate tool doesn't collide with clamps
+- Estimate total machining time: <strong>42 minutes</strong></p>
+<p><strong>G-code Generation:</strong>
+<div class="highlight"><pre><span></span><code>Post Process → GRBL / Mach3 → CO3_Nameplate.nc
+</code></pre></div></p>
+<p>File size: ~85,000 lines of G-code, 2.1MB</p>
+<hr />
+<h2 id="pre-cnc-safety-setup-checklist">Pre-CNC Safety &amp; Setup Checklist<a class="headerlink" href="#pre-cnc-safety-setup-checklist" title="Permanent link">&para;</a></h2>
+<h3 id="material-preparation-walnut-blank">Material Preparation: Walnut Blank<a class="headerlink" href="#material-preparation-walnut-blank" title="Permanent link">&para;</a></h3>
+<p><strong>Walnut Stock:</strong>
+- Dimensions: 160mm × 100mm × 12mm (oversized)
+- Surfaced: Both faces planed flat and parallel
+- Sanded: 120-grit to remove mill marks
+- Grain direction: Lengthwise along 150mm oval axis</p>
+<p><strong>Workholding:</strong>
+- Double-sided carpet tape on bottom
+- 4 corner clamps on spoilboard
+- Verify clamps won't interfere with toolpaths (simulate in CAM)
+- Stock sits flat with no rocking</p>
+<h3 id="tool-loading-calibration">Tool Loading &amp; Calibration<a class="headerlink" href="#tool-loading-calibration" title="Permanent link">&para;</a></h3>
+<p><strong>Tool 1: 6mm Flat End Mill</strong>
+- Inspect cutting edges (no chips or dullness)
+- Insert into ER20 collet
+- Tighten collet nut to 20 Nm torque
+- Tool length: Measure with touch probe (Z=0 at stock top)</p>
+<p><strong>Tool 2: 4mm Ball Nose End Mill</strong>
+- Same inspection and installation process
+- Will prompt for tool change mid-program</p>
+<h3 id="safety-checklist">Safety Checklist<a class="headerlink" href="#safety-checklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[x] Safety glasses ON</li>
+<li>[x] Hearing protection ON (CNC router is 90+ dB!)</li>
+<li>[x] Long hair tied back, no loose clothing</li>
+<li>[x] Emergency stop button tested and accessible</li>
+<li>[x] Dust collection system running (walnut dust is fine and hazardous)</li>
+<li>[x] Work area clear of obstructions</li>
+<li>[x] Fire extinguisher nearby (rare but spindle can spark)</li>
+<li>[x] First aid kit accessible</li>
+</ul>
+<hr />
+<h2 id="cnc-milling-execution-creating-the-co3-nameplate">CNC Milling Execution: Creating the CO3 Nameplate<a class="headerlink" href="#cnc-milling-execution-creating-the-co3-nameplate" title="Permanent link">&para;</a></h2>
+<h3 id="phase-1-roughing-pass-000-018">Phase 1: Roughing Pass (0:00 - 0:18)<a class="headerlink" href="#phase-1-roughing-pass-000-018" title="Permanent link">&para;</a></h3>
+<p><strong>Load G-code:</strong>
+<div class="highlight"><pre><span></span><code>File → Load → CO3_Nameplate.nc
+</code></pre></div></p>
+<p><strong>Starting the Program:</strong>
+1. Jog spindle to safe height (Z = +20mm)
+2. Start spindle at 18,000 RPM (wait for full speed)
+3. Press "Cycle Start"</p>
+<p><strong>Roughing Operation:</strong>
+- Spindle plunges to first 1mm depth with helical ramp
+- 6mm endmill traces letter outlines, clearing pockets
+- Walnut chips fly into dust collector
+- 4 passes total (1mm → 2mm → 3mm → 4mm depth)
+- Clean cuts with no burning smell ✓</p>
+<div class="admonition tip">
+<p class="admonition-title">Monitoring the Cut</p>
+<p>I watched carefully for:
+- <strong>Sound changes:</strong> Steady hum is good; squealing means dull tool or wrong feed
+- <strong>Chip evacuation:</strong> Chips should be flying, not packing into pockets
+- <strong>Burning smell:</strong> None detected (good sign!)
+- <strong>Vibration:</strong> Minimal chatter (walnut cuts cleanly)</p>
+</div>
+<p><strong>Time:</strong> 18 minutes<br />
+<strong>Result:</strong> Letter pockets cleared to 4mm depth, slight tool marks visible (expected)</p>
+<h3 id="phase-2-tool-change-to-ball-nose-018-020">Phase 2: Tool Change to Ball Nose (0:18 - 0:20)<a class="headerlink" href="#phase-2-tool-change-to-ball-nose-018-020" title="Permanent link">&para;</a></h3>
+<p><strong>Program pauses automatically:</strong>
+<div class="highlight"><pre><span></span><code>M06 T2 ; Tool change to 4mm Ball Nose
+</code></pre></div></p>
+<p><strong>Steps:</strong>
+1. Spindle stops and raises to safe height
+2. Remove 6mm flat endmill, store safely
+3. Install 4mm ball nose endmill in collet
+4. Re-measure tool length with touch probe (Z-offset updates)
+5. Press "Cycle Start" to resume</p>
+<p><strong>Time:</strong> 2 minutes</p>
+<h3 id="phase-3-finishing-pass-020-035">Phase 3: Finishing Pass (0:20 - 0:35)<a class="headerlink" href="#phase-3-finishing-pass-020-035" title="Permanent link">&para;</a></h3>
+<p><strong>Finishing Operation:</strong>
+- Ball nose traces 3D contours of letter walls
+- 0.25mm stepdown creates ultra-smooth surfaces
+- Multiple overlapping passes remove all roughing marks
+- Letters <strong>C</strong>, <strong>O</strong>, and <strong>3</strong> emerge with crisp edges
+- 2mm corner radii are perfectly smooth</p>
+<div class="admonition success">
+<p class="admonition-title">Letter Quality</p>
+<p>The finishing pass transformed the rough pockets into glass-smooth letter forms! The ball nose captured every curve of the "C" and "O", and the "3" horizontal bar is razor-sharp.</p>
+</div>
+<p><strong>Time:</strong> 15 minutes<br />
+<strong>Result:</strong> Letter surfaces are nearly mirror-smooth walnut</p>
+<h3 id="phase-4-oval-profile-cut-035-042">Phase 4: Oval Profile Cut (0:35 - 0:42)<a class="headerlink" href="#phase-4-oval-profile-cut-035-042" title="Permanent link">&para;</a></h3>
+<p><strong>Profile Cutting:</strong>
+- 6mm endmill cuts oval perimeter
+- 6 passes at 2mm depth each (12mm total through stock + spoilboard)
+- 4 tabs (3mm wide) hold CO3 nameplate in place
+- Lead-in arcs prevent entry marks on oval edge</p>
+<p><strong>Final Pass:</strong>
+- Endmill cuts through into spoilboard ~1mm
+- Part remains held by 4 tabs
+- Spindle stops, retracts to home position</p>
+<p><strong>Time:</strong> 7 minutes<br />
+<strong>Total CNC time:</strong> 42 minutes</p>
+<hr />
+<h2 id="post-cnc-processing-inspection">Post-CNC Processing &amp; Inspection<a class="headerlink" href="#post-cnc-processing-inspection" title="Permanent link">&para;</a></h2>
+<h3 id="part-removal">Part Removal<a class="headerlink" href="#part-removal" title="Permanent link">&para;</a></h3>
+<p><strong>Breaking Tabs:</strong>
+1. Turn off spindle and wait for full stop
+2. Use flush-cut saw to cut through 4 holding tabs
+3. CO3 nameplate lifts free from waste stock
+4. Sand tab remnants flush with 120-grit sandpaper</p>
+<h3 id="dimensional-verification">Dimensional Verification<a class="headerlink" href="#dimensional-verification" title="Permanent link">&para;</a></h3>
+<p><strong>Caliper Measurements:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Target</th>
+<th>Actual</th>
+<th>Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oval Length</td>
+<td>150.0mm</td>
+<td>150.1mm</td>
+<td>+0.1mm</td>
+</tr>
+<tr>
+<td>Oval Width</td>
+<td>90.0mm</td>
+<td>89.9mm</td>
+<td>-0.1mm</td>
+</tr>
+<tr>
+<td>Thickness</td>
+<td>10.0mm</td>
+<td>10.0mm</td>
+<td>0.0mm</td>
+</tr>
+<tr>
+<td>Letter C Depth</td>
+<td>4.0mm</td>
+<td>4.0mm</td>
+<td>0.0mm</td>
+</tr>
+<tr>
+<td>Letter O Depth</td>
+<td>4.0mm</td>
+<td>3.9mm</td>
+<td>-0.1mm</td>
+</tr>
+<tr>
+<td>Letter 3 Depth</td>
+<td>4.0mm</td>
+<td>4.0mm</td>
+<td>0.0mm</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analysis:</strong> All dimensions within ±0.1mm tolerance! CNC precision validated.</p>
+<h3 id="surface-quality-inspection">Surface Quality Inspection<a class="headerlink" href="#surface-quality-inspection" title="Permanent link">&para;</a></h3>
+<p><strong>Tool Marks:</strong>
+- Letter walls: &lt;0.02mm scalloping (ball nose stepover marks)
+- Letter bottoms: Completely smooth (no visible marks)
+- Oval perimeter: Clean cut, no tearout on walnut grain
+- Top surface: Untouched (as expected)</p>
+<p><strong>Wood Quality:</strong>
+- No tearout at corners or grain transitions ✓
+- No burning or scorching ✓
+- No cracks or splits ✓
+- Natural walnut grain flows beautifully through letters</p>
+<div class="admonition success">
+<p class="admonition-title">CNC Success!</p>
+<p>The CO3 nameplate came out <strong>perfectly</strong>. The letters have sharp, clean edges with smooth bottoms. The walnut grain adds organic beauty to the geometric precision. This looks professional!</p>
+</div>
+<hr />
+<h2 id="cnc-vs-other-fabrication-methods">CNC vs. Other Fabrication Methods<a class="headerlink" href="#cnc-vs-other-fabrication-methods" title="Permanent link">&para;</a></h2>
+<h3 id="co3-fabrication-method-comparison">CO3 Fabrication Method Comparison<a class="headerlink" href="#co3-fabrication-method-comparison" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Time</th>
+<th>Cost</th>
+<th>Precision</th>
+<th>Surface Quality</th>
+<th>Feasibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hand Carving</strong></td>
+<td>6+ hours</td>
+<td>$20</td>
+<td>±2mm</td>
+<td>Rough, inconsistent</td>
+<td>Difficult curves</td>
+</tr>
+<tr>
+<td><strong>Laser Cutting</strong></td>
+<td>15 min</td>
+<td>$15</td>
+<td>±0.2mm</td>
+<td>Burn marks, no 3D</td>
+<td>Only surface engraving</td>
+</tr>
+<tr>
+<td><strong>3D Printing (PLA)</strong></td>
+<td>3 hours</td>
+<td>$2</td>
+<td>±0.3mm</td>
+<td>Layer lines visible</td>
+<td>Not wood, prototype only</td>
+</tr>
+<tr>
+<td><strong>CNC Milling</strong></td>
+<td>42 min</td>
+<td>$20</td>
+<td>±0.1mm</td>
+<td>Glass-smooth</td>
+<td>✓ Perfect for CO3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CNC is optimal because:</strong>
+- Walnut is impossible to 3D print
+- Laser can only engrave surface (no 4mm depth)
+- Hand carving lacks precision for clean letters
+- CNC combines speed, precision, material versatility, and finish quality</p>
+<hr />
+<h2 id="reflection-lessons-learned">Reflection &amp; Lessons Learned<a class="headerlink" href="#reflection-lessons-learned" title="Permanent link">&para;</a></h2>
+<h3 id="technical-mastery">Technical Mastery<a class="headerlink" href="#technical-mastery" title="Permanent link">&para;</a></h3>
+<p><strong>CAM Skills:</strong>
+- STEP file import and orientation
+- Toolpath strategy: roughing → finishing → profiling
+- Feeds/speeds optimization for walnut hardwood
+- G-code generation and post-processing</p>
+<p><strong>CNC Operation:</strong>
+- Safe machine setup and workholding
+- Tool installation and length calibration
+- Real-time monitoring during cutting
+- Tool change procedures</p>
+<p><strong>Material Understanding:</strong>
+- Walnut cuts cleanly at 18,000-20,000 RPM
+- 800mm/min feed prevents burning
+- Grain direction affects tear-out risk
+- Hardwoods require sharp carbide tools</p>
+<h3 id="design-validation-through-prototyping">Design Validation Through Prototyping<a class="headerlink" href="#design-validation-through-prototyping" title="Permanent link">&para;</a></h3>
+<p><strong>Progression:</strong>
+<div class="highlight"><pre><span></span><code>Day 1: Sketch concept
+Day 2: CAD model (FreeCAD)
+Day 5: Laser-cut cardboard template (dimensional check)
+Day 6: 3D printed PLA prototype (depth validation)
+Day 7: CNC milled walnut final piece (REAL CO3!)
+</code></pre></div></p>
+<p>Each step refined the design and reduced risk. By Day 7, I was confident the CAD model was perfect—and it was!</p>
+<h3 id="tomorrow-finishing-enhancement">Tomorrow: Finishing &amp; Enhancement<a class="headerlink" href="#tomorrow-finishing-enhancement" title="Permanent link">&para;</a></h3>
+<p>The CNC nameplate is technically complete, but tomorrow (Day 8) I'll:
+- Sand progression (120 → 220 → 400 grit)
+- Apply dark walnut stain to enhance grain
+- Polyurethane topcoat for protection and sheen
+- Final beauty photography</p>
+<hr />
+<h2 id="resources-files">Resources &amp; Files<a class="headerlink" href="#resources-files" title="Permanent link">&para;</a></h2>
+<p><strong>CAM Files:</strong>
+- <code>CO3_Nameplate.step</code> – FreeCAD export (Day 2)
+- <code>CO3_Roughing.nc</code> – 6mm endmill roughing G-code
+- <code>CO3_Finishing.nc</code> – 4mm ball nose finishing G-code
+- <code>CO3_Profile.nc</code> – Oval cutout G-code</p>
+<p><strong>CNC Parameters:</strong>
+- Roughing: 800mm/min, 18,000 RPM, 1mm stepdown
+- Finishing: 600mm/min, 20,000 RPM, 0.25mm stepdown
+- Material: Walnut hardwood (150×90×10mm)
+- Total time: 42 minutes
+- Tool wear: Minimal (carbide endmills still sharp)</p>
+<p><strong>Documentation:</strong>
+- Dimensional inspection report (±0.1mm achieved)
+- Surface quality photos (before sanding)
+- CNC process video (time-lapse)</p>
+<hr />
+<p><strong>Tomorrow:</strong> Day 8 – Sanding, staining, and finishing the CO3 nameplate!</p>
+<h3 id="nesting-optimization">Nesting &amp; Optimization<a class="headerlink" href="#nesting-optimization" title="Permanent link">&para;</a></h3>
+<p><strong>Nesting</strong> is the process of arranging multiple parts on a single sheet to maximize yield and minimize waste.
+* <strong>Gap:</strong> Always leave at least <code>2x Tool Diameter</code> between parts for stability.
+* <strong>Tabs:</strong> Small bridges of material left behind to hold the part in place so it doesn't fly loose when cut.</p>
+<hr />
+<h2 id="4-design-for-cnc-fabrication">4. Design for CNC Fabrication<a class="headerlink" href="#4-design-for-cnc-fabrication" title="Permanent link">&para;</a></h2>
+<p>CNC routers have physical limitations that directly dictate design logic.</p>
+<h3 id="design-constraints">Design Constraints<a class="headerlink" href="#design-constraints" title="Permanent link">&para;</a></h3>
+<p><strong>Internal Corners</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">The Corner Radius Problem</p>
+<p>CNC routers use cylindrical bits. They <strong>cannot create sharp internal corners</strong>. Every inside corner will have a radius equal to at least half the bit diameter.</p>
+<p><strong>Solution:</strong> Use Dogbone or T-bone fillets to allow square parts to fit.</p>
+</div>
+<p><strong>Tolerances</strong>
+- Aim for ±0.5mm tolerance on dimensions
+- Account for material deflection during cutting
+- Design press-fit joints with 0.2mm interference</p>
+<p><strong>Depth of Cut</strong>
+- Multiple shallow passes are safer than one deep cut
+- Standard: 3mm depth per pass in plywood
+- Adjust based on material hardness and tool strength</p>
+<hr />
+<h2 id="5-practical-application">5. Practical Application<a class="headerlink" href="#5-practical-application" title="Permanent link">&para;</a></h2>
+<h3 id="my-cnc-project-workflow">My CNC Project Workflow<a class="headerlink" href="#my-cnc-project-workflow" title="Permanent link">&para;</a></h3>
+<p><strong>Design Phase:</strong>
+1. Created CAD model in FreeCAD with joinery features
+2. Arranged parts for nesting on 600x400mm plywood sheet
+3. Added tabs to hold parts in place during cutting</p>
+<p><strong>CAM Phase:</strong>
+1. Imported DXF into CAM software
+2. Generated toolpaths:
+   - Pockets: 3mm flat end mill, 50mm/s feed, 18000 RPM
+   - Profile cuts: Same tool, added 0.5mm tabs every 50mm
+3. Simulated toolpaths to check for collisions</p>
+<p><strong>Fabrication Phase:</strong>
+1. Secured plywood to spoilboard with screws
+2. Installed and measured tool length
+3. Set work zero at material surface
+4. Ran pocketing operations first
+5. Changed to smaller bit for detail work
+6. Cut profiles last
+7. Manually removed parts and cleaned tabs</p>
+<hr />
+<h2 id="reflection">Reflection<a class="headerlink" href="#reflection" title="Permanent link">&para;</a></h2>
+<p>CNC routing demonstrated that <strong>material removal is both science and art</strong>. Understanding feeds, speeds, and toolpath strategies transformed raw sheet material into functional parts.</p>
+<h3 id="key-lessons">Key Lessons<a class="headerlink" href="#key-lessons" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Tool selection directly affects surface finish and efficiency</strong></li>
+<li><strong>Nesting optimization reduces material waste</strong></li>
+<li><strong>Tabs are essential</strong> to prevent parts from moving during cutting</li>
+<li><strong>Internal corners require special design consideration</strong></li>
+<li><strong>CAM simulation prevents costly mistakes</strong></li>
+</ol>
+<!-- Images to be added:
+- CNC router machine
+- Nesting layout
+- Cutting process
+- Finished parts with tabs
+- Final assembly
+-->
+
+<h3 id="the-internal-corner-problem">The "Internal Corner" Problem<a class="headerlink" href="#the-internal-corner-problem" title="Permanent link">&para;</a></h3>
+<p>Because the cutting tool is round, a CNC router <strong>cannot cut a sharp internal 90° corner</strong>. The radius of the tool will always remain.</p>
+<div class="admonition tip">
+<p class="admonition-title">Solution: Dog-Bones &amp; T-Bones</p>
+<p>To fit a rectangular tenon into a slot, we must create <strong>"Dog-Bone" fillets</strong> (over-cutting the corners) to allow the mating part to seat fully square.</p>
+</div>
+<h3 id="tolerances-press-fit-joinery">Tolerances &amp; Press-Fit Joinery<a class="headerlink" href="#tolerances-press-fit-joinery" title="Permanent link">&para;</a></h3>
+<p>For parts to snap together without glue (Press-Fit), tolerances must be exact.
+* <strong>Kerf/Runout:</strong> The actual cut width is often slightly larger than the tool diameter due to vibration.
+* <strong>Offset:</strong> Designing parts with a <code>0.1mm - 0.2mm</code> interference for a tight friction fit.</p>
+<hr />
+<h2 id="5-assembly-structural-evaluation">5. Assembly &amp; Structural Evaluation<a class="headerlink" href="#5-assembly-structural-evaluation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Joinery:</strong> Using Mortise &amp; Tenon or Box Joints for mechanical strength.</li>
+<li><strong>Structural Evaluation:</strong> Checking if the sheet material direction (grain) aligns with the load-bearing requirements of the assembly.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../day_6/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Day 6 - Additive Manufacturing &amp; Prototyping">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Day 6 - Additive Manufacturing & Prototyping
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../day_8/" class="md-footer__link md-footer__link--next" aria-label="Next: Day 8 - Molding &amp; Casting Processes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Day 8 - Molding & Casting Processes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2026 Ernest Nkunzimana - Creative Commons Attribution Non-commercial
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ernestonkunzimana" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/ernestonkunzimana" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ernestonkunzimana" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.footer", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

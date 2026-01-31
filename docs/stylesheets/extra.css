@@ -4,11 +4,11 @@
    Header Background - Sky Blue
    ============================================ */
 
-/* Header/Navigation Bar - Sky Blue Background */
+/* Header/Navigation Bar - Dark Theme (matching footer) */
 .md-header {
-    background-color: #01161f !important; /* Sky Blue */
-    background: linear-gradient(135deg, #d7dcdf 0%, #d7dcdf 100%) !important;
-    box-shadow: 0 2px 8px rgba(240, 241, 241, 0.1);
+    background-color: #021736 !important;
+    background: linear-gradient(135deg, #021736 0%, #021736 100%) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -17,37 +17,37 @@
 }
 
 .md-header__button {
-    color: #1a1a1a !important;
+    color: #ffffff !important;
 }
 
 .md-header__title {
-    color: #050505 !important;
+    color: #ffffff !important;
 }
 
 .md-header__topic {
-    color: #0c0c0c !important;
+    color: #d0d0d0 !important;
 }
 
-/* Navigation Tabs - Sky Blue Theme */
+/* Navigation Tabs - Dark Theme (matching footer) */
 .md-tabs {
-    background-color: #01161f !important;
-    background: linear-gradient(135deg, #d7dcdf 0%, #d7dcdf 100%) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #021736 !important;
+    background: linear-gradient(135deg, #021736 0%, #021736 100%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .md-tabs__link {
-    color: #1a1a1a !important;
+    color: #ffffff !important;
     transition: all 0.3s ease;
 }
 
 .md-tabs__link:hover {
-    background-color: #01161f !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
     border-radius: 4px;
 }
 
 .md-tabs__link--active {
-    background-color: rgba(255, 255, 255, 0.4) !important;
-    border-bottom: 2px solid #1a1a1a;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-bottom: 2px solid #ffffff;
     font-weight: 600;
 }
 

@@ -57,7 +57,7 @@ extra_css:
 
 plugins:
   - search
-  - glightbox:
+  - glightbox
   - git-revision-date:
       enabled_if_env: CI
 

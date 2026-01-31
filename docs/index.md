@@ -124,55 +124,221 @@ https://github.com/ernestonkunzimana?tab=repositories
 
 Below are key projects currently under development or strategic planning:
 
-### 1️⃣ HSP-PCB (Human-Sovereign Privacy Board)
+### 1️⃣ Human-Sovereign Privacy & Security PCB (HSP-PCB)
 
-A hardware-level trust anchor for secure IoT ecosystems.  
-**Focus:** Tamper detection, cryptographic identity, modular secure integration.
+**Abstract:**  
+A hardware root-of-trust module that enforces human sovereignty, privacy, and data dignity at the hardware layer. The HSP-PCB ensures that personal data remains under user control, regardless of operating systems, network infrastructure, or vendor/server policies. It combines secure identity, hardware-enforced consent, cryptographically auditable recovery policies, and a failure model that preserves dignity and data sovereignty.
 
-### 2️⃣ Secure Edge AI Health Monitoring System
+**Current Status:**  
+Concept validated, architecture spec drafted with state machine, mitigation matrix, and hardware reference.
 
-A privacy-preserving remote health monitoring architecture using:
+**Roadmap:**
 
-- Edge AI inference
-- Federated learning
-- IoMT sensor integration
-- Minimal cloud dependency
+- **Q1–Q2 2026:** Hardware reference prototype design + secure element selection + BOM refinement
+- **Q3 2026:** First silicon / FPGA prototype
+- **Q4 2026:** Trusted firmware + recovery engine coding
+- **H1 2027:** Integration with Android API layer + host mediation
+- **H2 2027:** User lab testing + security audit
+- **2028:** Pilot deployment (security-focused markets, NGOs, healthcare)
+- **2029–2030:** Standardization & ecosystem integration
 
-**Goal:** Scalable chronic disease management infrastructure for African healthcare systems.
+**Key Technologies:**  
+Secure elements (EAL5+), hardware consent engine, tamper detection, policy engines, offline networking, recovery policy mesh.
 
-### 3️⃣ Sovereign Wireless Sensor Mesh Network
+**Impact Goals:**
 
-A distributed, self-healing mesh architecture using:
+- 50M users with hardware sovereignty by 2030
+- Global hardware privacy baseline influence
 
-- LoRa / ESP32 / low-power nodes
-- IPv6-based addressing
-- Encrypted peer-to-peer communication
-- Local edge orchestration
+---
 
-**Goal:** Rural & smart-city infrastructure with zero data extraction.
+### 2️⃣ Aetha – Pan-African Sovereign Cloud Infrastructure
 
-### 4️⃣ AfriVerse (Pan-African Digital Sovereignty Platform)
+**Abstract:**  
+A federated, sovereign cloud ecosystem that advances AU Agenda 2063, prioritizing data sovereignty, AI-native infrastructure, and African governance models. Aetha supports digital industrialization with localized data hosting, cross-border governance, and ethical AI infrastructure.
 
-Blockchain-powered, AI-enhanced digital ecosystem focused on:
+**Current Status:**  
+Strategic blueprint completed; governance and policy frameworks underway.
 
-- Data sovereignty
-- Creator empowerment
-- Identity security
-- XR-integrated experiences
-- African-owned infrastructure
+**Roadmap:**
 
-**Vision:** A secure, culturally grounded digital future aligned with AU Agenda 2063.
+- **2026:** Regional training centers prototype + policy working group
+- **2027:** First sovereign edge region deployment (Rwanda + neighbors)
+- **2028:** Continental network fabric + federated governance council
+- **2029:** AI-native node grid + interoperable sovereign services
+- **2030:** 80% digital inclusion target milestone
 
-### 5️⃣ Edge Infrastructure Lab (In Development)
+**Key Technologies:**  
+Federated cloud fabric, AI workload orchestration, sovereign identity integration, policy engines.
 
-A local testbed environment including:
+**Impact Goals:**
 
-- Raspberry Pi cluster
-- Secure container orchestration (k3s)
-- Local AI inference
-- Network simulation (SDN experimentation)
+- 500,000+ new tech jobs
+- 80% digital inclusion on participating regions
 
-**Goal:** Research-grade experimentation for MSc → PhD transition.
+---
+
+### 3️⃣ Rwanda SkyLink & AgriLink-Rwanda
+
+#### 3a. Rwanda SkyLink
+
+**Abstract:**  
+An emergency connectivity + smart city infrastructure that deploys resilient communication nodes (including HSP-PCB integration) to underserved regions. Focus on disaster response, healthcare, and governance access continuity.
+
+**Status:**  
+Initial planning and stakeholder alignment.
+
+**Roadmap:**
+
+- **2026:** Field integration prototype (edge nodes + HSP-PCB)
+- **2027:** Rural district pilot
+- **2028:** Full resilience grid + mesh fallback
+- **2029–2030:** Cross-border SkyLink mesh expansion
+
+**Key Technologies:**  
+Mesh networking, adaptive radio, edge compute, disaster response AI.
+
+**Impact:**  
+Reduced connectivity blackout periods, improved emergency response time.
+
+#### 3b. AgriLink-Rwanda
+
+**Abstract:**  
+A smart agriculture platform that leverages IoT, AI, and sovereign connectivity to enhance climate resilience, precision agriculture, and supply chain traceability for Rwandan farmers.
+
+**Status:**  
+Concept and ecosystem partnerships in early stage.
+
+**Roadmap:**
+
+- **2026:** Sensor network testbeds + data policy alignment
+- **2027:** Pilots with smallholder farms
+- **2028:** AI-driven climate modelling
+- **2029:** Nationwide agricultural digital infrastructure
+- **2030:** Regional expansion
+
+**Technologies:**  
+IoT, AI edge analytics, satellite and mesh comms, data sovereignty integration.
+
+**Impact:**  
+Higher yields, climate adaptation, farmer income stabilization.
+
+---
+
+### 4️⃣ Aether Vision — Ethical AI-Powered Drone System
+
+**Abstract:**  
+A stealth, AI-empowered drone platform designed to support ethical surveillance alternatives and autonomous operations for agriculture, disaster response, and environmental monitoring, with trust and transparency at its core.
+
+**Status:**  
+Design requirements, ethical framework under development.
+
+**Roadmap:**
+
+- **2026:** Ethical design specification + autonomy baseline
+- **2027:** Prototype airframe + onboard AI
+- **2028:** Field trials (agriculture & environment)
+- **2029:** Catalyst for AI-centric avionics
+- **2030:** Scaling for mixed civil applications
+
+**Technologies:**  
+AI perception stacks, flight autonomy, ethical telemetry, secure HW control.
+
+**Impact:**  
+Safer, non-exploitative UAV operations aligned with local governance.
+
+---
+
+### 5️⃣ Ethical Resource Extraction Framework
+
+**Abstract:**  
+Decentralized, transparent technologies for ethically governed resource extraction — leveraging blockchain, AI, and secure hardware to ensure community empowerment, environmental accountability, and benefit sharing.
+
+**Status:**  
+Framework design phase.
+
+**Roadmap:**
+
+- **2026:** Policy and governance framework
+- **2027:** Pilot in select mineral regions
+- **2028:** Blockchain-backed traceability
+- **2029:** AI risk assessment deployment
+- **2030:** Multi-stakeholder platform launch
+
+**Technologies:**  
+Blockchain traceability, AI governance, HSP-PCB-backed node trust.
+
+**Impact:**  
+Fair resource value distribution, ecosystem protection, community sovereignty.
+
+---
+
+### 6️⃣ Health AI Developer Foundations (HAI-DEF)
+
+**Abstract:**  
+A suite of open-weight medical AI models and tools designed for privacy-first healthcare support, enabling deployable, sovereign medical AI solutions across devices and cloud infrastructures.
+
+**Status:**  
+Models like MedGemma, MedASR, MedSigLIP, TxGemma, HeAR, and Path Foundation are already defined and available.
+
+**Roadmap:**
+
+- **2026:** On-device optimization + HSP-PCB integration for secure inference
+- **2027:** Clinical pilot deployments
+- **2028:** Integration into sovereign health cloud nodes
+- **2029:** Local model training ecosystems
+- **2030:** Pan-African health AI fabric
+
+**Technologies:**  
+Medical AI, on-device inference, secure pipelines.
+
+**Impact:**  
+Improved healthcare access, privacy-preserving clinical tools.
+
+---
+
+## 🗺️ Cross-Project Strategic Themes
+
+| Theme | Projects Tied | Strategic Impact |
+|-------|--------------|------------------|
+| **Sovereignty by Design** | HSP-PCB, Aetha, AgriLink, SkyLink | User & national data control |
+| **AI for Good** | Aether Vision, HAI-DEF, AgriLink | Ethical intelligence systems |
+| **Resilience & Inclusion** | SkyLink, AgriLink | Connectivity & climate adaptation |
+| **Ethical Governance** | Ethical Extraction, Aetha | Transparent multi-stakeholder value |
+
+---
+
+## 🧭 Research Roadmap (By Pillar)
+
+### A. Hardware Trust & Sovereignty (2026–2028)
+
+- Trusted firmware proofs
+- Cryptographic recovery mechanisms
+- Packaging for mass adoption
+
+### B. Ethical Network Control (2026–2027)
+
+- Offline-first comms protocols
+- Metadata minimization
+- Adaptive mesh networks
+
+### C. AI Integration (2026–2030)
+
+- On-device secure inference
+- Federated learning across sovereign nodes
+- Explainable AI in safety-critical domains
+
+### D. Policy & Governance (2026–2030)
+
+- Multi-stakeholder agreement frameworks
+- Pan-regional standards
+- Human rights compliance
+
+### E. Sustainability & Inclusion (2026–2030)
+
+- Low-power & repairable hardware design
+- Climate impacts in digital infrastructure
+- Cost-offset models for community uptake
 
 ---
 

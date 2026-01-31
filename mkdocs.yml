@@ -1,23 +1,22 @@
-# Replace the text below to customize your site
-site_name: Niyomugenga-URACEIoT/
-site_description: Niyomugenga Grace - Modeling & Fabrication Documentation
-site_author: Niyomugenga Grace
-copyright: Copyright 2026 Niyomugenga Grace - Creative Commons Attribution Non-commercial
+# Ernest Nkunzimana - ACEIoT WISENeT: Human-Sovereign Privacy & Security PCB Documentation
+site_name: Ernest Nkunzimana-ACEIoT-WISENeT
+site_description: HSP-PCB Board - Human-Sovereign Privacy & Security PCB - A 9-Day Digital Fabrication & Systems Design Journey
+site_author: Ernest Nkunzimana
+copyright: Copyright 2026 Ernest Nkunzimana - Creative Commons Attribution Non-commercial
 
-site_url: https://niyomugenga92.github.io/Niyomugenga-URACEIoT/
-repo_url: https://github.com/niyomugenga92/Niyomugenga-URACEIoT
-repo_name: Niyomugenga-URACEIoT
+site_url: https://ernestonkunzimana.github.io/HSP-PCB-board/
+repo_url: https://github.com/ernestonkunzimana/HSP-PCB-board
+repo_name: HSP-PCB-board
 
 extra:
   social:
-    # Change to your own social media or remove line to hide. 
-    # For more social icons ideas at https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/fablab_rwanda
-    - icon: fontawesome/brands/facebook
-      link: https://facebook.com/KigaliFabLab
+    - icon: fontawesome/brands/github
+      link: https://github.com/ernestonkunzimana
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/ernestonkunzimana
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/fablabrw
+      link: https://twitter.com/ernestonkunzimana
+  orcid: https://orcid.org/0009-0007-2107-6572
 
 theme:
   # The name of the theme, needs to match your requirements.txt file
@@ -83,14 +82,14 @@ markdown_extensions:
 # Navigation structure
 nav:
   - Home: index.md
-  - Daily Activities:
+  - Daily Course Activities:
     - Overview: Daily-Activity/index.md
-    - Day 1 - Foundations of Modeling & Fabrication: Daily-Activity/day_1.md
-    - Day 2 - Digital Modeling for Fabrication: Daily-Activity/day_2.md
-    - Day 3 - Technical Documentation & Quality Control: Daily-Activity/day_3.md
-    - Day 4 - Materials & Fabrication Methods: Daily-Activity/day_4.md
-    - Day 5 - Digital Fabrication I - CNC & Laser Cutting: Daily-Activity/day_5.md
-    - Day 6 - Digital Fabrication II - Additive Manufacturing: Daily-Activity/day_6.md
-    - Day 7 - Digital Fabrication III - CNC Router Milling: Daily-Activity/day_7.md
-    - Day 8 - Finishing & Surface Enhancement: Daily-Activity/day_8.md
-    - Day 9 - Final Presentation & Documentation: Daily-Activity/day_9.md
+    - Day 1 - Foundations & Problem Statement: Daily-Activity/day_1.md
+    - Day 2 - Digital Modeling & Architecture: Daily-Activity/day_2.md
+    - Day 3 - PCB Milling & Design for Manufacturability: Daily-Activity/day_3.md
+    - Day 4 - Materials & Environmental Constraints: Daily-Activity/day_4.md
+    - Day 5 - CNC & Laser Cutting (Enclosure Design): Daily-Activity/day_5.md
+    - Day 6 - Additive Manufacturing & Prototyping: Daily-Activity/day_6.md
+    - Day 7 - CNC Router Milling & Integration: Daily-Activity/day_7.md
+    - Day 8 - Molding & Casting Processes: Daily-Activity/day_8.md
+    - Day 9 - Final Fabrication & Documentation: Daily-Activity/day_9.md

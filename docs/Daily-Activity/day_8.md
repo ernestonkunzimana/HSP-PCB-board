@@ -1,4 +1,200 @@
-# Day 8 – Finishing & Surface Enhancement: CO3 Nameplate Completion
+# Day 8 - Molding & Casting Processes
+
+## 📌 Overview
+
+**Focus:** Scaled production through replication. Using HSP-PCB as master pattern.
+
+**Goal:** Create molds that enable production of 100+ identical units.
+
+---
+
+## 🔄 Casting Strategy
+
+### Two-Stage Process
+
+```
+Stage 1: Master Pattern (from Day 6 prototype)
+   ↓
+Stage 2A: Silicone Mold (negative)
+   ↓
+Stage 2B: Resin Casting (positive copies)
+```
+
+### Why Casting for Production?
+
+| Method | Unit Cost | Batch Size | Quality | Timeline |
+|--------|-----------|-----------|---------|----------|
+| **CNC (subtractive)** | $40 | 1–10 | Excellent | 2 hours/unit |
+| **3D Printing (additive)** | $5 | 1–50 | Good | 6 hours/unit |
+| **Casting (replication)** | $3 | 100+ | Excellent | 4 hours setup + 30 min/unit |
+
+**Decision:** For 500+ units, casting is 10× cheaper than CNC.
+
+---
+
+## 🧴 Silicone Mold Making
+
+### Materials
+
+| Material | Type | Use |
+|----------|------|-----|
+| **Ecoflex 00-30** | Silicone rubber | High-detail mold |
+| **Mold Release Agent** | Silicone spray | Prevent sticking |
+| **Mold Box** | Acrylic or cardboard | Contain silicone |
+
+### Process
+
+**Time:** ~30 min setup + 6 hours cure
+
+1. **Prepare Master**
+   - Clean PLA prototype (remove dust)
+   - Apply mold release (light spray coat)
+
+2. **Mix Silicone**
+   - Ecoflex ratio: 1A:1B by volume
+   - Mix 2–3 minutes (slow mixer to minimize bubbles)
+
+3. **Pour Mold**
+   - Build mold box around master (4 cm sides)
+   - Slowly pour silicone (de-gas if necessary)
+   - Allow to cure 6+ hours at room temperature
+
+4. **De-Mold**
+   - Carefully cut open mold box
+   - Remove master pattern (reusable)
+   - Inspect mold for undercuts/defects
+
+---
+
+## 🎨 Resin Casting (Production Enclosures)
+
+### Materials
+
+| Material | Type | Properties | Cost |
+|----------|------|------------|------|
+| **Polyurethane (Smooth-On Smooth Cast)** | Liquid resin | Fast cure (15 min), durable | $25/liter |
+| **Epoxy Resin** | Liquid resin | Slower cure (2 hr), very hard | $20/liter |
+| **Polyester Resin** | Liquid resin | Fastest (5 min), brittle | $15/liter |
+
+**Decision:** Polyurethane (Smooth-On Smooth Cast 325)
+- **Cure Time:** 15 minutes
+- **Demolding:** Safe at 30 minutes
+- **Durability:** 5+ years
+- **Cost:** ~$1.50/enclosure
+
+### Casting Process
+
+**Time per casting:** ~45 minutes (including cure)
+
+1. **Prepare Mold**
+   - Light mold release spray
+   - Position in level work area
+
+2. **Mix Resin**
+   - Part A : Part B = 1:1 by volume
+   - Mix 45 seconds (avoid introducing bubbles)
+   - Stir gently (not whipping)
+
+3. **Pour Casting**
+   - Slow pour into mold cavity
+   - Allow air bubbles to rise
+   - Fill to slightly above rim
+
+4. **Cure**
+   - Wait 15 minutes (initial cure)
+   - De-mold carefully
+   - Post-cure 24 hours for full strength
+
+### Finishing Casts
+
+After removing from mold:
+
+1. **Trim Gates** — Remove excess resin (sprues)
+2. **Sand Surface** — 220 grit for smoothness
+3. **Drill Holes** — Install threaded inserts
+4. **Paint** — Spray black paint (optional branding)
+
+---
+
+## 🎯 Quality Control in Casting
+
+### Common Issues & Solutions
+
+| Issue | Cause | Prevention |
+|-------|-------|-----------|
+| **Bubbles** | Trapped air | Pour slowly, de-gas resin |
+| **Incomplete Fill** | Low mold release | Use mold release generously |
+| **Sticking** | Resin bonds to mold | Use proper release agent |
+| **Shrinkage** | Resin curing pulls inward | Post-cure slowly (low temp) |
+| **Warping** | Uneven cooling | Cure in level position |
+
+### Inspection Checklist
+
+- [ ] Surface smooth (no pits)
+- [ ] Dimensions within ±1 mm (tolerance stack from mold)
+- [ ] No visible bubbles
+- [ ] Color consistent
+- [ ] Threaded inserts aligned
+- [ ] Weight ±5% from spec
+
+---
+
+## 📊 Production Economics
+
+### Cost Breakdown (per enclosure, 500-unit batch)
+
+| Cost Item | Amount |
+|-----------|--------|
+| **Mold** (amortized) | $0.20 |
+| **Resin** | $1.50 |
+| **Post-processing (labor)** | $0.80 |
+| **Threaded inserts** | $0.15 |
+| **Paint/finish** | $0.35 |
+| **Overhead (10%)** | $0.30 |
+| **Total per unit** | **$3.30** |
+
+### Comparison: 500-Unit Run
+
+| Method | Total Cost | Per Unit | Quality |
+|--------|-----------|----------|---------|
+| **CNC (Aluminum)** | $25,000 | $50 | Excellent |
+| **3D Printing** | $2,500 | $5 | Good |
+| **Casting** | $1,650 | $3.30 | Excellent |
+
+**Savings with casting:** ~$850 per 500 units (~50% cost reduction)
+
+---
+
+## ♻️ Sustainable Considerations
+
+**Problem:** Polyurethane waste from casting.
+
+**Solutions:**
+- **Scrap Resin Recycling:** Collect spills, cure fully, grind for filler
+- **Mold Longevity:** Silicone molds last 100+ pours (amortizes mold cost)
+- **End-of-Life:** Resin casts are non-toxic, can be mechanically recycled
+
+---
+
+## ✅ Day 8 Deliverables
+
+✅ **Silicone Mold** (from Day 6 prototype)  
+✅ **Cast Enclosures** (×5 test samples)  
+✅ **Dimensional Report** — QC data from casts  
+✅ **Production Protocol** — Standardized casting process  
+✅ **Cost Analysis** — Unit economics at scale  
+
+---
+
+## 🔗 Resources
+
+- **Smooth-On Casting Materials:** [smooth-on.com](https://www.smooth-on.com/)
+- **Mold Making Guide:** [Smooth-On Tutorial](https://www.smooth-on.com/page_11013.html)
+- **Resin Safety:** [MSDS Documentation](https://www.smooth-on.com/)
+
+---
+
+**Status:** Day 8 ✅ | **Next:** Day 9 - Final Fabrication & Documentation
 
 ## Course Overview
 The CNC-milled CO3 nameplate is structurally complete, but today I'll transform it from a raw machined part into a polished, professional finished product through sanding, staining, and protective coating.

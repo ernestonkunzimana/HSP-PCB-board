@@ -1,4 +1,138 @@
-# Day 5 – Laser Cutting: CO3 Template Validation
+# Day 5 - CNC & Laser Cutting (Enclosure Design)
+
+## 📌 Overview
+
+**Focus:** Subtractive fabrication for HSP-PCB enclosure, tamper detection casing.
+
+**Techniques:**
+- CNC routing (aluminum enclosure)
+- Laser cutting (prototype templates)
+- Precision tolerancing (±0.1 mm)
+
+---
+
+## 🔪 CNC Routing: Aluminum Enclosure
+
+### Machine Specifications
+
+**Tool:** 3-axis CNC mill (e.g., Bantam Tools, Sherline)  
+**Material:** Aluminum 5052-H32 (2mm stock)  
+**Toolpath Software:** Fusion 360 CAM  
+
+### Cutting Parameters
+
+| Parameter | Value | Notes |
+|-----------|-------|-------|
+| **Feed Rate** | 50 mm/min | Aluminum tolerates fast feeds |
+| **Spindle Speed** | 8,000–10,000 RPM | Balance heat & surface finish |
+| **Depth of Cut** | 2 mm per pass | Full thickness in one pass |
+| **Tool Bit** | ¼" end mill | 2-flute upcut for aluminum |
+
+### Enclosure Geometry
+
+```
+Top Case (85×54 mm):
+  • 1.5 mm walls
+  • Recessed area for PCB (1.8 mm deep)
+  • 4× M3 threaded inserts
+  • SMA connector pass-through
+  • Gasket groove (O-ring: 1 mm × 2 mm)
+
+Bottom Case:
+  • Matching 1.5 mm walls
+  • Battery cavity (CR2032)
+  • Tool-free latches (spring-loaded)
+  • Tamper-evident screw holes
+```
+
+---
+
+## 🔴 Laser Cutting: Prototype Template
+
+### Laser Specifications
+
+**System:** CO2 laser (40W) or fiber laser  
+**Material:** Acrylic or cardboard (for template validation)  
+**Kerf:** ~0.1 mm (cut width)  
+
+### Cutting Parameters
+
+| Material | Power | Speed | Focus |
+|----------|-------|-------|-------|
+| **Cardboard (1mm)** | 30% | 100 mm/s | Auto-focused |
+| **Acrylic (3mm)** | 60% | 50 mm/s | Manually focused |
+
+### Template Design
+
+```
+Day 5 Laser Prototype:
+  • 1:1 scale outline of PCB
+  • Trace routing (laser engraved, not cut)
+  • Component footprint boundaries
+  • Test point locations marked
+```
+
+---
+
+## 🛡️ Tamper Detection Casing
+
+### Design Principle
+
+**Goal:** Make tamper obvious; make repair possible.
+
+| Feature | Purpose | Implementation |
+|---------|---------|-----------------|
+| **Sealed Edges** | Prevent component swapping | Gaskets + screws visible from outside |
+| **Pressure Sensor Cavity** | Detect prying | Sealed air chamber connected to LPS33HW |
+| **Trace Continuity** | Detect cutting/scraping | Perimeter loop routed on top layer (visible) |
+| **Optical Ports** | Allow inspection without opening | Small acrylic windows in enclosure |
+
+---
+
+## 📊 Fabrication Sequence
+
+**Duration:** ~2 hours total
+
+1. **Aluminum Cutting** (45 min)
+   - Import STEP file from FreeCAD
+   - Generate CNC toolpath (Fusion 360 CAM)
+   - CNC: bottom case, top case
+
+2. **Surface Finishing** (30 min)
+   - Deburr edges (hand tool)
+   - Anodize preparation (clean with water)
+   - Anodizing plant: ~2 hours (external service)
+
+3. **Gasket Installation** (15 min)
+   - Cut O-ring to size (72 mm circumference)
+   - Press into grooves (no glue)
+
+4. **Assembly Test** (15 min)
+   - Fit PCB into case
+   - Close enclosure, verify clearances
+   - Test tamper sensors
+
+---
+
+## ✅ Quality Checkpoints
+
+- [ ] CNC: All dimensions within ±0.1 mm
+- [ ] Laser: Template traces match schematic
+- [ ] Surface finish: Smooth, no burrs
+- [ ] Gasket: Seated properly, compression ~10%
+- [ ] Assembly: Tool-free closure & open in <1 minute
+
+---
+
+## 🔗 Resources
+
+- **CNC Toolpath Optimization:** [Fusion 360 CAM](https://www.autodesk.com/products/fusion-360/features/cam)
+- **Laser Cutting Guidelines:** [Full Spectrum Laser](https://www.fslaser.com/)
+- **Aluminum Machining:** [CNC Cookbook](https://www.cnccookbook.com/aluminum-milling/)
+
+---
+
+**Status:** Day 5 ✅ | **Next:** Day 6 - Additive Manufacturing & Prototyping
 
 ## Course Overview
 Today I use laser cutting to create a full-scale cardboard template of the CO3 nameplate. This validates dimensions and proportions before committing to expensive walnut CNC milling.

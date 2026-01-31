@@ -1,4 +1,262 @@
-# Day 2 – Digital Modeling for Fabrication
+# Day 2 - Digital Modeling & Architecture
+
+## 📌 Course Day Overview
+
+**Theme:** From concept to CAD. Building parametric models for HSP-PCB.
+
+**Learning Objectives:**
+- Translate threat model into hardware architecture
+- Create parametric 3D model of PCB form factor
+- Design block diagrams for HSP-PCB subsystems
+- Apply Design for Manufacturing (DFM) constraints
+- Establish CAD workflows for precision fabrication
+
+---
+
+## 🏛️ HSP-PCB Architecture Overview
+
+### System-Level Block Diagram
+
+```
+┌─────────────────────────────────────────────────────────┐
+│              HSP-PCB Security Coprocessor                │
+├─────────────────────────────────────────────────────────┤
+│                                                           │
+│  ┌──────────────────┐         ┌──────────────────┐      │
+│  │ MCU + Crypto     │────────→│  Tamper Detection│      │
+│  │ (STM32L0 + ATECC)│         │  System          │      │
+│  │                  │         │                  │      │
+│  │ • 32-bit ARM     │         │ • Pressure       │      │
+│  │ • AES-256        │         │ • Continuity     │      │
+│  │ • ECC keygen     │         │ • Temperature    │      │
+│  └──────────────────┘         └──────────────────┘      │
+│          │                             │                 │
+│          └─────────────┬───────────────┘                │
+│                        │                                 │
+│              ┌─────────▼──────────┐                     │
+│              │  Secure Storage    │                     │
+│              │  (Flash + EEPROM)  │                     │
+│              │                    │                     │
+│              │ • Crypto keys      │                     │
+│              │ • Device cert      │                     │
+│              │ • Firmware         │                     │
+│              └────────────────────┘                     │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
+        │                              │
+        │ I2C/SPI                      │ Power & GND
+        │                              │
+     (To host MCU)            (3.3V battery or 5V USB)
+```
+
+### Major Subsystems
+
+| Subsystem | Purpose | Key Components |
+|-----------|---------|----------------|
+| **Security Processor** | Verify, attest, decrypt | STM32L0 ARM MCU + ATECC crypto chip |
+| **Tamper Detection** | Detect physical attacks | Pressure sensors, continuity traces |
+| **Secure Storage** | Protect cryptographic keys | Encrypted Flash + EEPROM |
+| **Power Management** | Low-power + secure shutdown | DC-DC converters, watchdog timer |
+| **Communication** | Interface with host systems | I2C/SPI isolation, optional NFC |
+
+---
+
+## 🎨 CAD Workflow: FreeCAD + KiCad
+
+### Step 1: Parametric Outline (FreeCAD)
+
+**Goal:** Create a credit-card form factor PCB outline with tolerance stack-ups.
+
+#### Constraints & Parameters
+
+| Parameter | Value | Notes |
+|-----------|-------|-------|
+| **Length** | 85 mm | ±0.5 mm (manufacturing tolerance) |
+| **Width** | 54 mm | ±0.5 mm (ISO/IEC 7810 ID-1 standard) |
+| **Thickness** | 1.6 mm | FR-4 PCB standard thickness |
+| **Corner Radius** | 3.0 mm | Soft corners for durability |
+| **Mount Points** | 4× M3 holes | For enclosure attachment |
+| **Port Openings** | SMA/JST (2×) | For external antenna & power |
+
+#### FreeCAD Model Steps
+
+1. Create 2D sketch with constraints (parametric)
+2. Extrude to 1.6 mm thickness
+3. Add corner fillets (R3.0 mm)
+4. Define mount points with hole diameter constraints
+5. Export as STEP for KiCad import
+
+**Key Design Decision:** Parametric model allows quick iteration if form factor changes.
+
+### Step 2: PCB Layout (KiCad)
+
+**Goal:** Route signals with security-aware trace layout.
+
+#### KiCad Design Rules
+
+- **Trace Width:** 0.25 mm (10 mils) for power, 0.15 mm (6 mils) for signals
+- **Clearance:** 0.15 mm (6 mils) minimum (conservative for hand-tracing if needed)
+- **Via Size:** 0.3 mm drill, 0.8 mm pad (through-hole vias for thermal relief)
+- **Layer Stack:** 2-layer design (Top + GND; minimize layers for verifiability)
+
+#### Security-Aware Layout
+
+**Principle:** Make attack surface visible through layout.
+
+```
+┌─────────────────────────────────┐
+│       Top Layer (Signals)        │
+│                                 │
+│  [MCU]  [ATECC]  [Flash]       │
+│    │       │         │          │
+│    └───────┼─────────┘          │
+│        [Tamper Sensors]         │
+│        (continuity traces)      │
+│                                 │
+└─────────────────────────────────┘
+
+┌─────────────────────────────────┐
+│   Bottom Layer (GND + Power)     │
+│                                 │
+│  GND plane (continuous)          │
+│  + Power distribution traces     │
+│                                 │
+└─────────────────────────────────┘
+```
+
+#### Tamper Detection Traces
+
+- **Perimeter Loop:** Continuous trace around device boundary
+  - If trace is cut, micro detects open circuit → triggers secure deletion
+  - Visible on PCB (not hidden) for auditability
+
+- **Component Continuity Check:** Traces under each IC
+  - Verify no components are cloned or replaced
+  - Regular self-test during operation
+
+### Step 3: Mechanical Enclosure (FreeCAD)
+
+**Goal:** Design aluminum enclosure that supports tamper detection casing.
+
+#### Enclosure Features
+
+| Feature | Purpose | Design |
+|---------|---------|--------|
+| **Sealed Case** | Faraday cage + physical integrity | Aluminum 5052-H32 (2mm) with gasket |
+| **Port Glands** | Sealed pass-throughs for power/comms | M5 glands with O-ring seals |
+| **Pressure Cavity** | Room for pressure sensor | Sealed air pocket with vent to sensor |
+| **Attachment Points** | Modular integration into vehicles/homes | ¼-20 tapped holes on sides |
+| **Bottom Access Panel** | For battery replacement | Tool-free latches (security screw) |
+
+---
+
+## 🔧 Design for Manufacturing (DFM)
+
+### Manufacturing Constraints
+
+#### PCB Milling (Day 3)
+
+- **Min trace width:** 0.15 mm (6 mils) for 1/32" bit
+- **Min clearance:** 0.15 mm between traces
+- **Via aspect ratio:** ≤ 1:10 (depth:width)
+- **Undercuts:** Avoid; mill from top-down only
+
+#### CNC Routing (Day 5)
+
+- **Min feature:** 2 mm diameter (tool path)
+- **Undercuts:** Require custom bits or multi-axis milling
+- **Draft angle:** 0–5° (vertical walls acceptable)
+- **Material:** Aluminum 5052-H32 (easy machine)
+
+#### 3D Printing (Day 6)
+
+- **Wall thickness:** Min 1.5 mm (Ultimaker FDM)
+- **Overhangs:** Max 45° without support
+- **Resolution:** ±0.3 mm (0.2 mm layer height)
+- **Material:** PLA (biodegradable, easy post-processing)
+
+---
+
+## 📊 Day 2 Deliverables
+
+### CAD Files Generated
+
+✅ **STEP Model** — Parametric PCB outline (FreeCAD → KiCad import)  
+✅ **KiCad Schematic** — Preliminary component list (netlist)  
+✅ **Enclosure CAD** — FreeCAD assembly drawing  
+✅ **Block Diagram** — System architecture (PNG + Visio)  
+✅ **DFM Report** — Manufacturing constraints checklist  
+
+### File Structure
+
+```
+UR-ACEIoT/
+├── docs/
+│   ├── day_2.md (this file)
+│   ├── images/day_2/
+│   │   ├── block_diagram.png
+│   │   ├── pcb_outline.png
+│   │   ├── enclosure_assembly.png
+│   │   └── dfm_checklist.pdf
+├── cad/
+│   ├── HSP_PCB_Outline.FCStd     # FreeCAD model
+│   ├── HSP_PCB_Outline.STEP      # STEP export (import to KiCad)
+│   ├── HSP_PCB.kicad_pcb         # KiCad layout (preliminary)
+│   ├── HSP_PCB.sch               # KiCad schematic
+│   └── Enclosure_v1.FCStd        # Mechanical design
+```
+
+---
+
+## 🧠 Reflection: From Concept to Model
+
+### The Bridge
+
+**Yesterday,** we established *why* HSP-PCB matters (threat model, design principles).
+
+**Today,** we translate that intent into *how* to build it (CAD, DFM, architecture).
+
+**Tomorrow,** we verify it can be manufactured (PCB milling specifications).
+
+### Key Insight
+
+**Parametric design is sovereignty too.**
+
+When a design is parametric (form factor, trace width, constraints all defined as variables), anyone can:
+- **Audit** the design decisions (parameters are transparent)
+- **Modify** for their context (smaller form factor? Change one variable)
+- **Reproduce** consistently (same parameters → same output)
+
+This is how open-source hardware scales across communities.
+
+### Challenge
+
+The models we create today must be:
+- **Verifiable** — Every line and hole justified by threat model or DFM
+- **Auditable** — Git history shows why each design decision was made
+- **Replicable** — A technician in Rwanda, India, or Brazil can follow the same CAD file and fabricate the same device
+
+---
+
+## 🔗 Resources
+
+### CAD Tools
+
+- **FreeCAD:** [freecadweb.org](https://wiki.freecadweb.org/) (open-source 3D CAD)
+- **KiCad:** [kicad.org](https://kicad.org/) (open-source PCB design)
+- **Fusion 360:** [autodesk.com/fusion](https://www.autodesk.com/products/fusion-360) (CAM for toolpaths)
+
+### Design Standards
+
+- [ISO/IEC 7810 (ID-1 Card Standard)](https://en.wikipedia.org/wiki/ISO/IEC_7810)
+- [NIST FIPS 140-2 (Cryptographic Module Validation)](https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/nistfips140-2.pdf)
+- [IPC-A-600 (PCB Acceptability)](https://www.ipc.org/standards/ipc-a-600)
+
+---
+
+**Status:** Day 2 Complete ✅  
+**Next:** Day 3 - PCB Milling & Design for Manufacturability  
+**Last Updated:** January 31, 2026
 
 ## Course Overview
 Digital modeling transforms design ideas into precise, fabrication-ready representations. Today I create the detailed CAD model for the **CO3 nameplate project**.

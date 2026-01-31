@@ -1,4 +1,79 @@
-# 4. Activity of Day 4
+# Day 4 - Materials & Environmental Constraints
+
+## 📌 Overview
+
+**Focus:** Sustainability, longevity, material selection for trustworthy hardware.
+
+- **PCB Material:** FR-4 with Parylene-C conformal coating
+- **Enclosure:** Aluminum 5052-H32 (anodized)
+- **Power:** Dual supply (USB 5V + CR2032 battery backup)
+- **Environment:** -40 to +85°C operating range
+- **Lifecycle:** Designed for 10+ year serviceable life
+
+---
+
+## 🛠️ Key Material Decisions
+
+| Component | Material | Why |
+|-----------|----------|-----|
+| **PCB Substrate** | FR-4 (Glass-reinforced epoxy) | Standard, recyclable, machineable |
+| **Conformal Coating** | Parylene-C | Uniform moisture barrier, tamper-evident |
+| **Enclosure** | Aluminum 5052-H32 | EMI shielding, machineable, repairable |
+| **Surface Finish** | Type II Anodize (black) | Corrosion protection, professional appearance |
+| **Connectors** | Gold-plated brass | Corrosion resistance in humid climates |
+
+---
+
+## 🌡️ Environmental Specifications
+
+```
+Operating Temperature:   -40°C to +85°C
+Storage Temperature:     -50°C to +100°C
+Humidity (non-condensing): 10% to 95% RH
+Altitude:               0 to 5,000 meters
+Vibration (transport):  EN 60068-2-6 (4–8 Hz, 5 mm amplitude)
+```
+
+---
+
+## 🔋 Power Management
+
+**Continuous (Wired):** 5V USB, 100 mA nominal  
+**Backup (Battery):** CR2032, ~100 mAh capacity → ~2–3 year life  
+**Secure Delete:** On power loss, crypto keys are overwritten 3× then deleted
+
+---
+
+## ♻️ Sustainability Commitments
+
+✅ **Zero-waste design** — All materials recyclable  
+✅ **Repairable architecture** — Tool-free access to battery  
+✅ **Long lifecycle** — 10 year design target with firmware updates  
+✅ **Community maintenance** — Training manuals provided (CC BY-NC)  
+✅ **End-of-life process** — Secure deletion + material recovery
+
+---
+
+## 📚 Repairability Checklist
+
+- [ ] All fasteners are standard tools (T5 Torx, M3 hex)
+- [ ] No adhesives (all mechanical fastening)
+- [ ] Component values marked (legible silkscreen)
+- [ ] Test points accessible without disassembly
+- [ ] Battery replaceable in < 5 minutes
+- [ ] Firmware updateable via USB
+
+---
+
+## 🔗 Resources
+
+- [IPC-A-600 PCB Acceptability Standard](https://www.ipc.org/)
+- [Right to Repair Movement](https://www.ifixit.com/)
+- [Ellen MacArthur Circular Economy](https://www.ellenmacarthurfoundation.org/)
+
+---
+
+**Status:** Day 4 ✅ | **Next:** Day 5 - CNC & Laser Cutting
 
 # Materials & Fabrication Methods
 

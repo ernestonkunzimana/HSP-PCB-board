@@ -1,33 +1,212 @@
-# 1. Activity of Day 1
+# Day 1 - Foundations & Problem Statement
 
-# Foundations of Modeling & Fabrication
+## 📌 Course Day Overview
 
-## Student Introduction
-**This is Miss Niyomugenga Grace**, a Master of Science student in **IoT Embedded Computing Systems (ECS)** at University of Rwanda, ACEIoT. This portfolio documents my journey in Modeling & Fabrication.
-## My Course Project: CO3 Nameplate
-Throughout this course, I will design and fabricate a custom **CO3 nameplate** - an oval-shaped sign with carved lettering. This project will integrate multiple fabrication techniques learned across all 9 days, from initial concept to final finishing.
-## Course Understanding
-This documentation explores the core philosophy that **design and making are inseparable**.
+**Theme:** Why digital trust matters. Foundations of modeling for secure hardware.
 
-In this module, we move beyond simple manufacturing to understand that design today is **computational, material-driven, and production-aware**.
+**Learning Objectives:**
+- Understand the collapse of digital trust and human harm
+- Contextualize the HSP-PCB project within IoT sovereignty
+- Introduce design thinking for hardware security
+- Establish threat modeling as a design principle
 
-### Project Brief: CO3 Nameplate
-**Objective:** Design and fabricate a professional nameplate featuring "CO3" text
-**Requirements:**
-- Oval outer shape for aesthetic appeal
-- Deeply carved/cut lettering for visual impact
-- Smooth, professional finish suitable for display
-- Demonstrate mastery of digital design and fabrication techniques
+---
 
-### Key Concepts
-!!! quote "The Design-to-Fabrication Continuum"
-    The process is not a straight line. It is an **iterative cycle**:
-    
-    1.  **Design:** Establishing intent.
-    2.  **Model:** Representing form, logic, and behavior.
-    3.  **Prototype:** Testing assumptions.
-    4.  **Fabricate:** Transforming models into physical artifacts.
-    5.  **Evaluate:** Using feedback to improve the design.
+## 🔐 The Crisis: Digital Trust Has Collapsed
+
+### Context: Loss of Autonomy
+
+Over the past two decades, digital systems have become essential infrastructure for commerce, communication, governance, and identity. Yet this infrastructure has been systematically compromised:
+
+#### **Manufacturers Exploit Users**
+- Smartphones ship with backdoors, spyware, and forced telemetry
+- Devices collect intimate behavioral data without consent
+- Hardware is engineered to fail, forcing unnecessary replacement
+- Repair is criminalized through DMCA enforcement
+
+#### **Cloud Providers Monetize Privacy**
+- Data brokers aggregate intimate information about billions of people
+- Third-party tracking is ubiquitous across web & mobile ecosystems
+- Governments demand backdoor access; corporations comply without warrant
+- "Free services" are the product—not users, but their data
+
+#### **IoT Systems Amplify Exposure**
+- Smart homes, vehicles, wearables, and industrial systems leak data continuously
+- Most IoT devices have no security updates, no recovery path
+- Supply chain attacks compromise hardware before it reaches users
+- Decentralized systems (vehicles, medical) become single points of control
+
+#### **The Harm: Real Human Impact**
+- Political prisoners tracked through location data
+- Undocumented immigrants persecuted through biometric systems
+- Women subjected to stalking through smart device hijacking
+- Communities surveilled through weaponized algorithms
+- **Autonomy is lost when data becomes liability**
+
+---
+
+## 🎯 The HSP-PCB Solution: Human-Sovereign Privacy & Security
+
+### Problem Statement
+
+**How can we build hardware infrastructure that restores human autonomy in digital systems while remaining:**
+- **Verifiable** (not a black box)
+- **Repairable** (owned & maintained by users, not corporations)
+- **Modular** (integrated into diverse systems—vehicles, homes, devices)
+- **Sustainable** (engineered for long lifecycle, not planned obsolescence)
+
+### What HSP-PCB Solves
+
+The **Human-Sovereign Privacy & Security PCB (HSP-PCB)** is a **tamper-detecting, cryptographically-hardened security coprocessor** designed to:
+
+1. **Verify Hardware Integrity** — Detect unauthorized modifications, cloned devices, or supply-chain tampering
+2. **Protect Cryptographic Keys** — Isolated key storage with tamper response (secure deletion)
+3. **Enable Privacy-First IoT** — Serve as trust anchor for vehicles, homes, and portable devices
+4. **Maintain User Control** — All schematics open for inspection; repairable by trained technicians
+5. **Prove Authenticity** — Zero-knowledge proofs of device legitimacy without data leakage
+
+---
+
+## 🏗️ Design Philosophy: Security by Design
+
+### Principles
+
+| Principle | What It Means | Example |
+|-----------|--------------|---------|
+| **Verifiable** | All design decisions must be visible & auditable | Open schematics in KiCad; git history of every change |
+| **Recoverable** | Systems must survive failure & maintain availability | Graceful degradation; no kill switches; repair manual |
+| **Modular** | Components must compose without creating new vulnerabilities | Plug-and-play integration; standardized interfaces |
+| **Minimal Trust** | Reduce reliance on corporations or governments | Open-source firmware; community-auditable code |
+| **Transparent Threat Model** | Publish what we can & cannot defend against | Threat matrix; attack surface documentation |
+
+---
+
+## 📋 Threat Landscape: What We're Defending Against
+
+### Threat Categories
+
+| Threat | Attack Vector | HSP-PCB Defense |
+|--------|--------------|-----------------|
+| **Supply Chain Tampering** | Microcontroller replaced with spy chip | Tamper detection casing; trace continuity sensors |
+| **Hardware Cloning** | Legitimate devices copied by adversaries | Cryptographic attestation; unique key per device |
+| **Key Extraction** | Physical attacks (side-channel, fault injection) | Tamper-responsive secure deletion; isolation |
+| **Firmware Modification** | Malicious code injected into firmware | Signed boot; immutable boot loader; flash protection |
+| **Physical Tampering** | Solder joints scraped, traces cut, components moved | Pressure sensors; laser tamper-detection grid |
+| **Cold Boot Attacks** | Memory extracted while powered (DRAM not cleared) | Encrypted key storage; volatile-only crypto keys |
+
+### Threats We Do NOT Defend Against
+
+- Quantum computing (future concern; key length > 256 bits for post-quantum prep)
+- Insider threat (manufacturer compromises device at fabrication)
+- Nation-state adversary with unlimited resources (physical reverse-engineering)
+- User negligence (user hands device to attacker)
+
+---
+
+## 🛠️ Modeling Foundation: Design for Security
+
+### Design Approach
+
+To make HSP-PCB work, we must integrate **security into the *physical* design**:
+
+1. **Form Factor Constraints** — Credit-card size + <2.5mm thickness
+   - Limits what sensors we can embed
+   - Affects power consumption & thermal stability
+   - Requires tight mechanical tolerances
+
+2. **Threat Detection Sensors** — Embedded in PCB layout
+   - Pressure sensors (detects physical stress)
+   - Trace continuity sensors (detects wire cutting)
+   - Temperature sensors (detects targeted heating)
+   - Laser sensors (optional: detects optical probing)
+
+3. **Enclosure Integrity** — Mechanical design must support sensing
+   - Metal casing (Faraday cage + structural integrity)
+   - Sealed ports with tamper detection
+   - Modular attachment points (for different IoT contexts)
+
+4. **Power & Thermal** — Design for secure failure
+   - Isolated power domains (sensitive circuits shielded)
+   - Low-power operation (battery-based deployment)
+   - Thermal shutdown triggers secure deletion
+
+---
+
+## 📊 Day 1 Deliverables
+
+### What We Document Today
+
+✅ **Executive Summary** — 1-page overview of HSP-PCB  
+✅ **Problem Statement** — Why digital trust matters  
+✅ **Threat Landscape** — Categorized attacks & defense mechanisms  
+✅ **Design Philosophy** — Security-by-design principles  
+✅ **Success Criteria** — What makes HSP-PCB a success  
+
+### Key Artifacts
+
+```
+docs/
+├── day_1.md              # This document
+├── images/
+│   ├── day_1/
+│   │   ├── threat_landscape.png
+│   │   ├── design_philosophy.png
+│   │   └── trust_collapse.png
+```
+
+---
+
+## 🧠 Reflection: Why This Matters
+
+### Context
+
+**Modeling is not just about shapes and dimensions.** It's about solving structural failures in systems.
+
+The HSP-PCB project begins with understanding a **structural failure in digital trust**:
+- Trust was delegated to corporations → They betrayed it
+- Governments mandate backdoors → Citizens become monitored
+- Devices are designed to fail → Autonomy becomes costly
+
+**Our model (the PCB) is a response to this structure.**
+
+### What We're Really Building
+
+The PCB is not just a circuit board—it's an **artifact of sovereignty**:
+- **For the user:** Proof that their device is theirs, not rented
+- **For the community:** A replicable, auditable security standard
+- **For society:** An existence proof that trustworthy hardware is possible
+
+### Tomorrow's Work
+
+Tomorrow, we translate this vision into **digital models**: CAD outlines, block diagrams, and parametric constraints that engineers can manufacture.
+
+---
+
+## 🔗 Resources & Further Reading
+
+### On Digital Trust Collapse
+
+- EFF: [Surveillance Self-Defense](https://ssd.eff.org/)
+- Shoshana Zuboff: *The Age of Surveillance Capitalism*
+- Bruce Schneier: *Click Here to Kill Everybody*
+
+### On Hardware Security
+
+- [NIST Hardware Security Module Guidelines](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-133r1.pdf)
+- [Open Hardware Certification](https://www.oshwa.org/)
+- [Privacy by Design](https://www.privacybydesign.ca/)
+
+### Tools We'll Use
+
+- **KiCad:** [kicad.org](https://kicad.org/)
+- **FreeCAD:** [freecadweb.org](https://wiki.freecadweb.org/Manual)
+- **Git & GitHub:** [github.com/ernestonkunzimana](https://github.com/ernestonkunzimana)
+
+---
+
+**Status:** Day 1 Complete ✅  
+**Next:** Day 2 - Digital Modeling & Architecture  
+**Last Updated:** January 31, 2026
 
 # Digital Modeling
 

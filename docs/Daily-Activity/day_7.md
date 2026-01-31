@@ -1,4 +1,211 @@
-# Day 7 – CNC Milling: Final CO3 Nameplate Fabrication
+# Day 7 - CNC Router Milling & Integration
+
+## 📌 Overview
+
+**Focus:** Large-scale integration, modular attachment design, router-cut prototypes.
+
+**Context:** HSP-PCB must integrate into vehicles, homes, industrial IoT systems → needs standardized mounting.
+
+---
+
+## 🏗️ Modular Integration Strategy
+
+### The Problem
+
+HSP-PCB is small & portable, but how does it physically integrate into:
+- **Vehicles** (dashboard mount, under-seat placement)
+- **Smart Homes** (wall panel, gateway enclosure)
+- **Wearables** (body-worn pouch, backpack clip)
+- **Industrial IoT** (DIN rail mount, panel insert)
+
+### The Solution: Standardized Mounting Interface
+
+```
+HSP-PCB Core Module (85×54 mm, 2.5 mm)
+          ↓
+    ┌─────────────────┐
+    │  ¼-20 Threads  │  (4× on sides)
+    │  (attachment   │
+    │   points)      │
+    └─────────────────┘
+          ↓
+    ┌──────┬──────┬──────┐
+    │      │      │      │
+  VEHICLE HOME WEARABLE INDUSTRIAL
+   Mount  Panel  Clip    Bracket
+```
+
+---
+
+## 🛠️ CNC Router: Fabrication at Scale
+
+### Router Specifications
+
+| Parameter | Capability |
+|-----------|------------|
+| **Machine** | ShopBot PRT/4 (4×8 ft table) |
+| **Spindle Speed** | 6,000–24,000 RPM |
+| **Cutting Area** | 4 ft × 8 ft (1.2 m × 2.4 m) |
+| **Tool Library** | ½", ¼", ⅛" end mills; V-groove bits |
+| **Material** | Wood, plastic, aluminum composites |
+
+### HSP-PCB Modular Mounting Bracket
+
+**Application:** Vehicle OBD-II port integration
+
+**Material:** Delrin (acetal copolymer)
+- **Cost:** ~$8/part
+- **Machinability:** Excellent (smooth finish)
+- **Durability:** 20+ years
+- **Environmental:** Recyclable
+
+**Design:**
+```
+Delrin Bracket (120 × 80 × 15 mm):
+  • HSP-PCB socket (spring-loaded)
+  • ¼-20 threaded insert (attach to vehicle)
+  • Cable pass-through (I2C/power)
+  • Tamper-evident security screw
+```
+
+### Cutting Program (G-Code)
+
+```gcode
+; CNC Router: HSP-PCB Mounting Bracket
+G28 Z  ; Home Z axis
+G0 X0 Y0  ; Move to origin
+G0 Z5  ; Clear table
+
+; Pocket for HSP-PCB socket
+G1 Z-5 F100  ; Plunge ½" depth
+G1 X85 F50   ; Rout to X position
+... [detailed tool path] ...
+
+; Drill ¼-20 threaded insert hole
+G81 X50 Y50 Z-6 R2  ; Canned drill cycle
+... [additional operations] ...
+
+M30  ; End program
+```
+
+---
+
+## 🚗 Vehicle Integration Example
+
+### OBD-II Port Mount
+
+**Context:** HSP-PCB as vehicle security module
+
+```
+Vehicle OBD-II Port (standard ISO)
+        ↓
+   Delrin Bracket (CNC-routed)
+        ↓
+   HSP-PCB mounted
+        ↓
+  I2C to vehicle CAN bus
+        ↓
+  Verify VIN & detect tampering
+```
+
+### Wiring
+
+```
+OBD Connector:
+  Pin 16 (12V) ──┐
+                 ├→ [Fuse] → HSP-PCB Power
+  Pin 4 (GND) ──┘
+
+  Pin 6 (CAN-H)  → [Optocoupler] → I2C Bridge
+  Pin 14 (CAN-L) ─→
+```
+
+---
+
+## 🏠 Smart Home Integration
+
+### Wall-Mount Gateway
+
+**CNC-Routed Housing (Acrylic, 200×150×50 mm)**
+
+```
+┌─────────────────────────┐
+│  Smart Home Gateway     │
+├─────────────────────────┤
+│                         │
+│  [HSP-PCB Core]  ↑      │
+│  [Mesh Radio]    │ Mounted
+│  [Ethernet PHY]  │ on internal
+│                  │ rail
+├─────────────────────────┤
+│ ¼-20 bracket (wall)     │
+└─────────────────────────┘
+```
+
+**Router Program Features:**
+- Internal shelf for PCB mounting
+- Cable routing grooves
+- Fan cutout (thermal management)
+- Front-panel cable pass-throughs
+
+---
+
+## 📊 Production Scaling
+
+### Router Batch Cutting
+
+**Setup:** 1 × 4 ft Delrin stock → 12 brackets per sheet
+
+**Process:**
+1. Import CAD → CAM software (VCarve, ShopBot)
+2. Nest parts (optimize material waste)
+3. Export G-code
+4. Load stock, zero router
+5. Run program (~15 min per batch)
+6. Remove parts, inspect
+7. Repeat (20 batches = 240 brackets in 1 production run)
+
+**Cost Analysis:**
+- Material: $80/batch
+- Labor: 1 hour operator + 5 hours prep = $120
+- **Unit cost:** ($80 + $120) / 12 = **~$17/bracket**
+
+---
+
+## 🔧 Assembly & Testing
+
+### Sub-Assembly Process
+
+**Time per unit:** ~10 minutes
+
+1. Insert spring in socket (HSP-PCB mounting)
+2. Press ¼-20 threaded insert
+3. Solder I2C header connector
+4. Hot-melt glue cable (strain relief)
+5. Test continuity (continuity meter)
+6. Apply security screw (Loctite)
+
+---
+
+## ✅ Day 7 Deliverables
+
+✅ **Router CAM Program** (G-code for mounting brackets)  
+✅ **Integration Diagrams** (vehicle, home, industrial)  
+✅ **Assembly Manual** (step-by-step sub-assembly)  
+✅ **Cost Analysis** (material + labor at scale)  
+✅ **Test Protocol** (electrical & mechanical validation)  
+
+---
+
+## 🔗 Resources
+
+- **CNC Router CAM:** [VCarve Pro](https://www.vectric.com/products/vcarve-pro)
+- **G-Code Reference:** [Siemens Manufacturing](https://new.siemens.com/)
+- **Delrin Material:** [DuPont Engineering Polymers](https://www.dupont.com/)
+
+---
+
+**Status:** Day 7 ✅ | **Next:** Day 8 - Molding & Casting Processes
 
 ## Course Overview
 Today is the most critical day: **CNC milling the final CO3 nameplate in walnut hardwood.** After weeks of design, validation, and prototyping, it's time to create the real thing.

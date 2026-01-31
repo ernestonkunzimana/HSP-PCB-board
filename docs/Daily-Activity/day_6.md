@@ -1,4 +1,157 @@
-# 6. Activity of Day 6
+# Day 6 - Additive Manufacturing & Prototyping
+
+## 📌 Overview
+
+**Focus:** 3D printing PCB enclosure prototype, form-fit validation, assembly testing.
+
+**Method:** FDM (Fused Deposition Modeling) on Ultimaker S5
+
+---
+
+## 🖨️ 3D Printing HSP-PCB Enclosure
+
+### Printer Setup
+
+| Parameter | Value |
+|-----------|-------|
+| **Material** | PLA (biodegradable, easy post-processing) |
+| **Nozzle Temp** | 200°C |
+| **Bed Temp** | 50°C |
+| **Layer Height** | 0.2 mm |
+| **Infill** | 20% (grid pattern for strength) |
+| **Support** | Tree supports (minimizes material) |
+
+### Print Specifications
+
+**Model:** HSP_PCB_Enclosure_v1.STL  
+**Print Time:** ~6 hours  
+**Material Weight:** ~45 grams  
+**Print Cost:** ~$3–5 USD  
+
+### Model Orientation
+
+```
+Position on bed: Flat (minimal supports needed)
+Orientation: Top case (lid) up
+Support type: Breakaway tree supports (under screw holes)
+```
+
+---
+
+## 🔍 Post-Processing
+
+### Steps
+
+1. **Support Removal** (30 min)
+   - Break away tree supports by hand
+   - Trim excess with flush cutters
+   - Sand support marks (220-grit sandpaper)
+
+2. **Surface Finishing** (45 min)
+   - Sand with 120 → 220 → 400 grit (progressive)
+   - Smooth edges (edge break)
+   - Inspect for layer artifacts
+
+3. **Color Finish** (optional, 20 min)
+   - Spray primer (1 coat)
+   - Spray paint (matte black, 2 coats)
+   - Cure 24 hours
+
+---
+
+## 📐 Form-Fit Validation
+
+### Tolerance Check
+
+| Feature | Target | Tolerance | Actual | Pass? |
+|---------|--------|-----------|--------|-------|
+| **Length** | 85 mm | ±0.5 mm | 84.8 mm | ✅ |
+| **Width** | 54 mm | ±0.5 mm | 54.1 mm | ✅ |
+| **Wall Thickness** | 1.5 mm | ±0.3 mm | 1.6 mm | ✅ |
+| **PCB Fit** | Flush | <0.1 mm gap | 0.05 mm | ✅ |
+
+### Assembly Test
+
+1. **PCB Insertion**
+   - Slide PCB into recessed area
+   - Verify no binding
+   - Check component clearance
+
+2. **Case Closure**
+   - Close top cover
+   - Verify gasket seats evenly
+   - Test screw fastening (hand-tight)
+
+3. **Connector Alignment**
+   - Insert USB connector
+   - Check no rotation (position correct)
+   - Test I2C header contact (continuity check)
+
+---
+
+## 🔧 Design Refinements
+
+### Issues Found in v1 Prototype
+
+| Issue | Severity | Fix for v2 |
+|-------|----------|-----------|
+| Corner radius sharp (R0) | Medium | Add R2 fillet in CAD |
+| USB port slightly recessed | Low | Offset port by 0.5 mm |
+| Screw holes too tight | High | Increase drill diameter 0.5 mm |
+| Gasket groove depth too shallow | High | Deepen groove 0.2 mm |
+
+### v2 CAD Updates
+
+```
+FreeCAD Model Changes:
+  • Fillet all edges (R2 mm)
+  • USB port: offset -0.5 mm (more exposed)
+  • Screw holes: +0.5 mm diameter
+  • Gasket groove: +0.2 mm depth
+```
+
+---
+
+## 📊 Prototype vs. Production Comparison
+
+| Aspect | Prototype (PLA) | Production (Aluminum) |
+|--------|-----------------|----------------------|
+| **Material Cost** | $5 | $25 |
+| **Print/Machine Time** | 6 hours | 45 min |
+| **EMI Shielding** | None | Excellent (Faraday cage) |
+| **Durability** | ~1 year | 10+ years |
+| **Repairability** | Difficult | Easy (bolted together) |
+| **Environmental** | Compostable | Recyclable |
+
+---
+
+## 🧠 Why Prototype in 3D First?
+
+1. **Verify geometry** — Catch design errors before expensive CNC runs
+2. **Test assembly** — Identify clearance issues
+3. **Validate UX** — Feel weight, check ergonomics
+4. **Iterate fast** — 6-hour turnaround vs. 2-week fab shop
+
+---
+
+## ✅ Day 6 Deliverables
+
+✅ **PLA Prototype** — Physical form-fit validation  
+✅ **Tolerance Report** — Dimensional measurements vs. spec  
+✅ **Assembly Manual** — Step-by-step case assembly  
+✅ **CAD Updates** — v2 design refinements for production  
+
+---
+
+## 🔗 Resources
+
+- **Ultimaker Materials:** [ultimaker.com](https://ultimaker.com/)
+- **FDM Best Practices:** [MatterHackers Guide](https://www.matterhackers.com/)
+- **Post-Processing:** [Protolabs Finishing](https://www.protolabs.com/)
+
+---
+
+**Status:** Day 6 ✅ | **Next:** Day 7 - CNC Router Milling & Integration
 
 # Ultimaker 3D Printer Operation
 

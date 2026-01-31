@@ -299,18 +299,18 @@ Prototyping validates design decisions before committing to final fabrication.
 **Result:** Refine feeds, speeds, and depth settings
 
 ### Phase 4: Final Fabrication (Day 7-8)
-**Material:** Premium wood or aluminum
-**Process:** CNC router milling with optimized parameters
-**Finishing:** Sanding, staining/painting, protective coating
+**Material:** Aluminum 5052-H32 or FR-4 PCB
+**Process:** CNC milling, PCB etching, and assembly
+**Finishing:** Anodizing, conformal coating, final testing
 
 # Reflection – Lessons Learned & Critical Analysis
 
 ## Day 1 Achievements
-Today marked the beginning of the CO3 nameplate project. I established:
-- Clear project objectives and requirements
-- Initial design concepts through sketching
-- Fabrication strategy (CNC milling for final, 3D printing for prototype)
-- Prototyping timeline across the course
+Today marked the beginning of the HSP-PCB project. I established:
+- Clear security threat model and requirements
+- System architecture concepts and component selection
+- Fabrication strategy (PCB manufacturing, CNC enclosure milling, assembly)
+- Development timeline across the course
 
 ## The Iterative Process
 The most important lesson from this module is that the process is **iterative, not linear**. For the CO3 nameplate:

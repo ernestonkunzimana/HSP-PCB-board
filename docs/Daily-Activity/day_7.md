@@ -208,31 +208,31 @@ OBD Connector:
 **Status:** Day 7 ✅ | **Next:** Day 8 - Molding & Casting Processes
 
 ## Course Overview
-Today is the most critical day: **CNC milling the final CO3 nameplate in walnut hardwood.** After weeks of design, validation, and prototyping, it's time to create the real thing.
+Today is the most critical day: **CNC milling the final HSP-PCB enclosure in aluminum.** After weeks of design, validation, and prototyping, it's time to create the production housing.
 
 ---
 
-## CO3 CNC Milling: From Digital to Physical
+## HSP-PCB CNC Milling: From Digital to Physical
 
 ### Objective
-Mill the final CO3 nameplate with:
-- Material: Walnut hardwood (150mm × 90mm × 10mm blank)
+Mill the final HSP-PCB enclosure with:
+- Material: Aluminum 5052-H32 (85mm × 54mm × 3mm blank)
 - Precision: ±0.1mm tolerance
-- Surface finish: Tool marks <0.05mm (smooth enough for sanding)
-- Letter depth: Exactly 4mm as designed
+- Surface finish: Anodized for corrosion resistance
+- Component pockets: Exact depths for component fit
 
-### Why CNC for the Final Piece?
+### Why CNC for the Final Enclosure?
 
-!!! success "CNC Advantages for CO3"
-    - **Precision:** 0.01mm repeatability (vs. hand carving's ±2mm)
-    - **Smooth finish:** 18,000 RPM cuts leave glass-like surfaces
-    - **Walnut-safe:** Controlled feeds prevent tearout/splitting
-    - **Reproducible:** Can make multiple identical CO3 nameplates
-    - **Complex curves:** Oval and letter curves cut perfectly
+!!! success "CNC Advantages for HSP-PCB"
+    - **Precision:** 0.01mm repeatability ensures component fit
+    - **Repeatability:** Can produce multiple identical housings for mass production
+    - **Integration:** Milled pockets align perfectly with PCB components
+    - **Strength:** Aluminum provides EMI/RFI shielding
+    - **Surface prep:** Anodizing adds corrosion protection and aesthetic finish
 
 **3D Printing vs. CNC:**
-- Prototype (Day 6): 3D printed PLA validates design ($2, 3 hours)
-- Final (Day 7): CNC milled walnut creates premium product ($20, 45 min)
+- Prototype (Day 6): 3D printed PLA validates design ($2, 2 hours)
+- Final (Day 7): CNC milled aluminum creates production housing ($15, 30 min)
 
 ---
 

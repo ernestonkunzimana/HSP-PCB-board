@@ -259,20 +259,20 @@ The models we create today must be:
 **Last Updated:** January 31, 2026
 
 ## Course Overview
-Digital modeling transforms design ideas into precise, fabrication-ready representations. Today I create the detailed CAD model for the **CO3 nameplate project**.
+Digital modeling transforms design ideas into precise, fabrication-ready representations. Today I create the detailed CAD model for the **HSP-PCB security module**.
 
 ---
 
-## Project: CO3 Nameplate CAD Design
+## Project: HSP-PCB Enclosure & Component Layout
 
 ### Design Specifications
-**Objective:** Create a production-ready 3D model of the CO3 nameplate
-**Software:** FreeCAD (Part Design Workbench)
+**Objective:** Create a production-ready 3D model of the HSP-PCB enclosure
+**Software:** FreeCAD (Part Design Workbench) + KiCad
 **Final Dimensions:**
-- Outer oval: 150mm x 90mm
-- Base thickness: 10mm
-- Letter depth: 4mm (carved)
-- Letter height: "C" = 40mm, "O" = 38mm, "3" = 40mm
+- Credit-card form factor: 85mm × 54mm
+- Enclosure thickness: <2.5mm
+- PCB thickness: 1.6mm
+- Component clearance: 3mm maximum height
 - Border width: 12mm minimum
 
 ---

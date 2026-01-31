@@ -47,21 +47,8 @@ Create comprehensive technical drawings and quality control documentation for th
 
 ### Technical Drawing Examples
 
-<div class="image-grid">
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_3/Fab_Lab_Again_PCB.png">
-      <img src="../images/day_3/Fab_Lab_Again_PCB.png" alt="Technical Drawing - Top View" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>Technical Drawing - Top View with Dimensions</figcaption>
-  </figure>
-  
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_3/Fab_Lab_Again_PCB_2.png">
-      <img src="../images/day_3/Fab_Lab_Again_PCB_2.png" alt="Technical Drawing - Section View" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>Section View Showing Component Depth</figcaption>
-  </figure>
-</div>
+![Technical Drawing - Top View](../images/day_3/Fab_Lab_Again_PCB_2.png)
+*Technical Drawing - Top View with Dimensions*
 
 ### Dimensioning Standards
 
@@ -79,14 +66,8 @@ Applied proper dimensioning practices:
 
 ### Inspection Points for CO3 Nameplate
 
-<div class="image-grid">
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_3/Fab_Lab_Again_PCB_22.jpg">
-      <img src="../images/day_3/Fab_Lab_Again_PCB_22.jpg" alt="Quality Control Inspection" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>Quality Control Inspection Process</figcaption>
-  </figure>
-</div>
+![Quality Control Inspection](../images/day_3/Fab_Lab_Again_PCB_224.jpg)
+*Quality Control Inspection Process*
 
 | Feature | Target Dimension | Tolerance | Measurement Method |
 |---------|------------------|-----------|-------------------|
@@ -146,21 +127,8 @@ For future enhancement, the CO3 nameplate could incorporate LED backlighting:
   - Power connector (USB or battery)
   - Simple on/off switch
 
-<div class="image-grid">
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_3/Fab_Lab_Again_PCB_224.jpg">
-      <img src="../images/day_3/Fab_Lab_Again_PCB_224.jpg" alt="PCB Design Example" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>Example PCB Layout for LED Control</figcaption>
-  </figure>
-  
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_3/Fab_Lab_Again_PCB_2246.jpg">
-      <img src="../images/day_3/Fab_Lab_Again_PCB_2246.jpg" alt="PCB Design Detail" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>Detailed PCB Component Placement</figcaption>
-  </figure>
-</div>
+![PCB Design Detail](../images/day_3/Fab_Lab_Again_PCB_2246.jpg)
+*Detailed PCB Component Placement*
 
 **PCB Specifications:**
 - Size: 50mm x 30mm
@@ -268,64 +236,13 @@ Tomorrow I will:
 
 ---
 
-## Visual Gallery: Technical Documentation Examples
-
-<div class="image-grid" style="margin-top: 2rem;">
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_3/Fab_Lab_Again_PCB.png">
-      <img src="../images/day_3/Fab_Lab_Again_PCB.png" alt="Complete Technical Drawing Package" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>Complete Technical Drawing Package</figcaption>
-  </figure>
-  
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_3/Fab_Lab_Again_PCB_2.png">
-      <img src="../images/day_3/Fab_Lab_Again_PCB_2.png" alt="Detailed Section Views" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>Detailed Section Views</figcaption>
-  </figure>
-  
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_3/Fab_Lab_Again_PCB_22.jpg">
-      <img src="../images/day_3/Fab_Lab_Again_PCB_22.jpg" alt="Inspection Documentation" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>Quality Inspection Documentation</figcaption>
-  </figure>
-</div>
-
-<!-- Images to be added:
-- Technical drawing: Top view with all dimensions
-- Technical drawing: Section view showing letter depth
-- Technical drawing: Detail view of corner radius
-- Quality control checklist document
-- BOM spreadsheet screenshot
-- Measurement tools (calipers, depth gauge)
--->
-
-The objective of this activity is to design a **single-sided PCB** using **KiCad** based on a real microcontroller system.  
-Students will create a board that:
-
-- Uses an **ATtiny45 microcontroller**
-- Controls an **LED using a push button**
-- Can be programmed via a **6-pin ISP header**
-- Is suitable for **PCB milling** and **hand soldering**
-
-This is a complete embedded system design, not a demo circuit.
-
----
-
-## Functional Description
-
-- The **ATtiny45 runs at 5V**
-- The **LED turns ON when the push button is pressed**
-- The program is uploaded using an **ISP programmer**
-- The board is powered using an **external 5V connector**
-
----
 
 ## CO3 Nameplate - Project Reference
 
 ![CO3 Nameplate Design](../images/day_4/2.jfif)
 *The CO3 nameplate - our target design for this fabrication project*
+
+!!! note "Modeling Precision Transferable to PCB Workflows"
+    The precision modeling and Design for Manufacturing (DFM) logic applied to the CO3 nameplate—including dimensional accuracy, tolerance management, and quality control—are directly transferable to PCB design workflows. The same attention to detail, parametric constraints, and technical documentation standards ensure successful fabrication in both digital fabrication and electronics manufacturing.
 
 

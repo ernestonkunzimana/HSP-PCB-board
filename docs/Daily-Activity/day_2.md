@@ -87,6 +87,9 @@ For the CO3 nameplate, precision is critical because:
     
     * **Tool:** Pad `PartDesign_Pad`
     * **Parameter:** Length = 10mm (base thickness)
+    
+    ![Extruded Base - Precision Modeling](../images/day_2/Extruded Base.png)
+    *Extruded Base: Demonstrating precision modeling and parametric constraints in FreeCAD - the oval base with 10mm thickness showing dimensional accuracy*
     * **Result:** A solid 10mm thick oval base plate
 
 ---
@@ -249,35 +252,8 @@ Today I successfully created a production-ready 3D CAD model of the CO3 nameplat
 
 ## CAD Design Gallery
 
-<div class="image-grid" style="margin-top: 2rem;">
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_2/Day2_Activity1.png">
-      <img src="../images/day_2/Day2_Activity1.png" alt="FreeCAD Modeling Workflow" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>FreeCAD Modeling Workflow</figcaption>
-  </figure>
-  
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_2/DESIGN_2.jpg">
-      <img src="../images/day_2/DESIGN_2.jpg" alt="Initial Design Concept" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>Initial Design Concept</figcaption>
-  </figure>
-  
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_2/dESIGN2_1.jpg">
-      <img src="../images/day_2/dESIGN2_1.jpg" alt="Design Iteration 1" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>Design Iteration 1</figcaption>
-  </figure>
-  
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_2/DESIGN2_2.jpg">
-      <img src="../images/day_2/DESIGN2_2.jpg" alt="Design Iteration 2" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>Design Iteration 2</figcaption>
-  </figure>
-</div>
+![Extruded Base - Precision Modeling](../images/day_2/Extruded Base.png)
+*Extruded Base: Demonstrating precision modeling and parametric constraints in FreeCAD*
 
 ---
 

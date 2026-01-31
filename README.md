@@ -9,38 +9,7 @@ This documentation site showcases the complete digital fabrication workflow for 
 - **Process**: CAD modeling → Prototyping → CNC milling → Finishing
 - **Techniques**: FreeCAD, laser cutting, 3D printing, CNC routing, hand finishing
 
-Visit the [live documentation site](Ran terminal command: git status
-
-Ran terminal command: git push origin main
-
-Ran terminal command: git log --oneline -5
-
-🎉 **Perfect! All files successfully pushed to your repository!**
-
-## Summary of what's now on GitHub:
-
-**Repository:** https://github.com/niyomugenga92/Niyomugenga-URACEIoT
-
-**Latest commits pushed:**
-1. All recent updates (commit 4170147)
-2. Updated README with project information
-3. Fixed repository name display
-4. Updated site title
-5. Configured correct GitHub repository links
-
-**Complete documentation system includes:**
-- 📁 All 9 days of CO3 nameplate documentation
-- 🖼️ Images for Days 1, 2, 3, 4, 5, and 6
-- 🎨 Custom responsive CSS styling
-- 🔗 Proper GitHub repository integration
-- ⚙️ GitHub Actions workflow for auto-deployment
-- 📝 Updated README.md
-- 🎯 All configuration files (mkdocs.yml, requirements.txt)
-
-**Your documentation site will be automatically deployed to:**
-`https://niyomugenga92.github.io/Niyomugenga-URACEIoT/`
-
-Check the **Actions** tab in your GitHub repository to see the deployment progress! 🚀) to explore the full project.
+Visit the [live documentation site](https://niyomugenga92.github.io/Niyomugenga-URACEIoT/) to explore the full project.
 
 ---
 
@@ -48,8 +17,6 @@ Check the **Actions** tab in your GitHub repository to see the deployment progre
 
 * This website is built and published automatically using **GitHub Actions**, every time you push changes to the repository
 * The markdown content is generated into a site using **MkDocs**, a static site generator written in Python
-* Uses the **Material for MkDocs** theme with custom teal/purple color scheme
-* Includes **9 comprehensive daily activities** documenting the complete CO3 fabrication process
 * Uses the **Material for MkDocs** theme with custom teal/purple color scheme
 * Includes **9 comprehensive daily activities** documenting the complete CO3 fabrication process
 
@@ -82,7 +49,7 @@ Check the **Actions** tab in your GitHub repository to see the deployment progre
    ```
 
 4. **View your site**
-   - Open your browser to `http://127.0.0.1:8000/NiyomugengaGrace/`
+   - Open your browser to `http://127.0.0.1:8000/`
    - Edit markdown files in `docs/` and see live changes!
 
 ---
@@ -90,7 +57,7 @@ Check the **Actions** tab in your GitHub repository to see the deployment progre
 ## Project Structure
 
 ```
-EphronMk/
+Niyomugenga-URACEIoT/
 ├── .github/              # GitHub Actions workflow (auto-deployment)
 ├── docs/                 # All documentation content
 │   ├── Daily-Activity/   # 9 days of CO3 project documentation

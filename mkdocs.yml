@@ -25,8 +25,8 @@ theme:
   # Material theme options:
   palette:
     # try other colors from https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
-    primary: teal
-    accent: deep purple
+    primary: blue
+    accent: light blue
   font:
     # See available fonts from https://fonts.google.com/
     text: Montserrat
@@ -38,6 +38,15 @@ theme:
   features:
     - navigation.tabs
     - navigation.footer
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
 
 # Read more here https://squidfunk.github.io/mkdocs-material/customization/#additional-css 
 extra_css:

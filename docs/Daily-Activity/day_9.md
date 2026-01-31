@@ -412,6 +412,32 @@ This course transformed how I see the world. Every object can now be reverse-eng
 
 ## Final Presentation: CO3 Nameplate Showcase
 
+### Workflow Overview: The Complete Six-Step Modeling Journey
+
+This section presents the full modeling journey from concept to final product, documenting each critical step in the CO3 nameplate fabrication process.
+
+![Day 1 - Initial Draft](../images/day_1/Initial Draft.png)
+*Step 1: Initial Draft - Concept sketching transitioning from analog to digital*
+
+![Day 2 - Extruded Base](../images/day_2/Extruded Base.png)
+*Step 2: Extruded Base - Precision modeling and parametric constraints in FreeCAD*
+
+![Day 4 - Edge Refinement](../images/day_4/Edge Refinement.png)
+*Step 3: Edge Refinement - Chamfering and surface polish relating to material behavior*
+
+![Day 5 - Carving Letters](../images/day_5/Carving Letters.png)
+*Step 4: Carving Letters - Tool radius, carving depth, and geometry optimized for CNC*
+
+![Day 6 - Final 3D Print](../images/day_6/Final 3D print.jpeg)
+*Step 5: Final 3D Print - 3D printed CO3 nameplate from Ultimaker showcasing material, resolution, and finish*
+
+![Day 7 - Letter Sketching](../images/day_7/Letter Sketching.png)
+*Step 6: Letter Sketching - Letter geometry respecting toolpaths and router constraints*
+
+This workflow demonstrates the complete design-to-fabrication continuum, from initial concept through digital modeling, prototyping, and final production.
+
+---
+
 ### The Finished Product
 
 **CO3 Nameplate – Final Specifications:**
@@ -520,269 +546,4 @@ I'm no longer just a user of technology—I'm a creator.
 
 *Documentation compiled by Niyomugenga Grace*  
 *UR-ACEIoT Modeling & Fabrication Course*
-|-----------|-------------------|--------|
-| **Structural Base** | CNC Router Milling | Precision, strength, material efficiency |
-| **Custom Bracket** | 3D Printing | Complex geometry, rapid iteration |
-| **Electronics Housing** | Laser Cutting | Precise 2D profiles, fast production |
-| **Decorative Elements** | Molding & Casting | Replication, organic forms |
-| **PCB** | PCB Milling | Custom electronics integration |
-
-### Integration Challenges
-- **Tolerance stack-up:** Multiple processes mean multiple tolerances
-- **Material compatibility:** Ensuring parts work together physically and aesthetically
-- **Assembly sequence:** Planning logical construction order
-- **Fastening methods:** Selecting appropriate joining techniques
-
----
-
-## Final Assembly & Finishing Techniques
-
-### Assembly Strategy
-
-**1. Pre-Assembly Testing**
-- Dry-fit all components before permanent assembly
-- Verify dimensions and tolerances
-- Identify interference issues
-
-**2. Assembly Sequence**
-- Start with base/structural components
-- Add subassemblies
-- Install electronics and wiring
-- Attach external/decorative elements
-
-**3. Fastening Methods**
-- **Mechanical:** Screws, bolts, press-fits, snap-fits
-- **Adhesive:** CA glue, epoxy, hot glue
-- **Welding/Soldering:** For permanent metal or electronic joints
-
-### Finishing Techniques
-
-**Surface Preparation**
-- Sand progressively (80 → 220 → 400 grit)
-- Fill imperfections with putty or filler
-- Clean with isopropyl alcohol
-
-**Finishing Options**
-- **Paint:** Primer + color + clear coat for durability
-- **Oil/Stain:** For wood to enhance grain
-- **Polish:** For metals and plastics for high gloss
-- **Coating:** Clear protective coatings for wear resistance
-
----
-
-## Fabrication Documentation Standards
-
-### Why Documentation Matters
-!!! info "Documentation is Design"
-    Professional documentation ensures your work can be understood, reproduced, and improved upon by others (or your future self).
-
-### Essential Documentation Components
-
-**1. Design Intent**
-- What problem does this solve?
-- What are the design goals?
-- What constraints exist?
-
-**2. Process Documentation**
-- Step-by-step workflow
-- Machine settings and parameters
-- Material specifications
-- Fabrication time estimates
-
-**3. Technical Drawings**
-- Dimensioned CAD drawings
-- Assembly diagrams
-- Exploded views for complex assemblies
-- Bill of materials (BOM)
-
-**4. Photography**
-- Process photos showing key steps
-- Final product from multiple angles
-- Detail shots of critical features
-- Comparison with prototypes
-
-**5. Reflection**
-- What worked well?
-- What would you change?
-- What did you learn?
-- Future improvement ideas
-
----
-
-## Technical Drawings & File Organization
-
-### Drawing Standards
-
-**Orthographic Projections**
-- Front, top, and side views
-- Consistent scale across all views
-- Dimension lines with clear values
-- Hidden lines shown as dashed
-
-**Isometric Views**
-- 3D representation for clarity
-- Useful for complex assemblies
-- Shows relationships between parts
-
-**Detail Views**
-- Enlarged views of critical features
-- Callouts for specific dimensions
-- Section views to show internal features
-
-### Digital File Organization
-
-```
-Project_Name/
-├── CAD/
-│   ├── Source_Files/ (FreeCAD, Fusion360, etc.)
-│   ├── STEP/
-│   └── Drawings_PDF/
-├── CAM/
-│   ├── Toolpaths/
-│   └── G-code/
-├── Fabrication/
-│   ├── STL/ (for 3D printing)
-│   ├── DXF/ (for laser cutting)
-│   └── Gerber/ (for PCB)
-├── Documentation/
-│   ├── Process_Photos/
-│   ├── Final_Photos/
-│   ├── Technical_Drawings/
-│   └── BOM.xlsx
-└── README.md
-```
-
----
-
-## Final Project Presentation
-
-### Presentation Structure
-
-**1. Introduction (2 minutes)**
-- Project overview
-- Design challenge
-- Goals and constraints
-
-**2. Design Process (3 minutes)**
-- Concept development
-- CAD modeling approach
-- Iteration and refinement
-
-**3. Fabrication (3 minutes)**
-- Methods selected and why
-- Challenges encountered
-- Solutions implemented
-
-**4. Results (2 minutes)**
-- Final product demonstration
-- Functionality testing
-- Measurements and validation
-
-**5. Reflection (2 minutes)**
-- Lessons learned
-- What worked well
-- What would be improved
-- Future development ideas
-
-### Presentation Tips
-!!! success "Effective Communication"
-    - Use clear, high-quality images
-    - Tell a story, not just facts
-    - Acknowledge failures as learning opportunities
-    - Demonstrate functionality when possible
-    - Be prepared to answer technical questions
-
----
-
-## Critique & Feedback
-
-### Evaluation Criteria
-
-**Technical Excellence**
-- Precision of fabrication
-- Appropriate process selection
-- Quality of finish
-
-**Design Quality**
-- Functionality
-- Aesthetics
-- Innovation
-- Problem-solving approach
-
-**Documentation**
-- Completeness
-- Clarity
-- Reproducibility
-- Professional presentation
-
-**Process Mastery**
-- Understanding of methods
-- Safety awareness
-- Efficiency
-- Material optimization
-
----
-
-## Reflection on Process, Materials, and Outcomes
-
-### Personal Growth
-Through this course, I have developed from understanding individual fabrication methods to **integrating multiple processes** into cohesive projects. Each day built upon the previous, creating a comprehensive understanding of the **design-to-fabrication continuum**.
-
-### Technical Skills Acquired
-1. **Digital Modeling:** Parametric CAD, DFM principles, file format expertise
-2. **PCB Design:** Circuit design, milling processes, assembly
-3. **Material Knowledge:** Properties, selection strategies, fabrication behavior
-4. **Subtractive Methods:** CNC routing, laser cutting, tolerances
-5. **Additive Methods:** 3D printing, support strategies, post-processing
-6. **Molding & Casting:** Pattern making, mold design, replication
-7. **Integration:** Multi-process workflows, assembly, finishing
-8. **Documentation:** Technical communication, reproducibility
-
-### Philosophy Internalized
-!!! quote "Core Insight"
-    **"Design and making are inseparable."** Fabrication is not an afterthought—it is integral to the design process from the very beginning.
-
-### Looking Forward
-The skills and mindset developed in this course extend beyond specific tools or processes. They represent a **way of thinking** about how digital design translates to physical reality, how materials behave, and how to approach complex problems systematically.
-
-### Final Thoughts
-Every project in this course taught me that:
-- **Iteration is essential**—first attempts rarely succeed
-- **Documentation preserves knowledge**—for myself and others
-- **Constraints drive creativity**—limitations force innovative solutions
-- **Process selection is a design decision**—not a separate concern
-- **Failure is feedback**—each mistake teaches something valuable
-
----
-
-## Course Completion
-
-!!! success "Journey Complete"
-    This documentation represents not just a collection of projects, but a **learning journey** from foundational concepts to integrated fabrication mastery. Each day built skills that compound into comprehensive digital fabrication literacy.
-
-### Course Topics Mastered
-- Day 1: Foundations of Modeling & Fabrication
-- Day 2: Digital Modeling for Fabrication
-- Day 3: PCB Milling Techniques & Fabrication Process
-- Day 4: Materials & Fabrication Methods
-- Day 5: Digital Fabrication I: CNC & Laser Cutting
-- Day 6: Digital Fabrication II: Additive Manufacturing
-- Day 7: Digital Fabrication III: CNC Router Milling & Cutting
-- Day 8: Molding & Casting Processes
-- Day 9: Final Fabrication, Documentation & Presentation
-
----
-
-**Documented by:** Niyomugenga Grace  
-**Course:** Modeling & Fabrication  
-**Institution:** UR-ACEIoT
-
-<!-- Images to be added:
-- Final project overview
-- Assembly process photos
-- Technical drawings
-- Finished project multiple angles
-- Presentation slides
-- Process comparison photos
--->
 

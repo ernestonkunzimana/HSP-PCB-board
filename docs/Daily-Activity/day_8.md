@@ -479,6 +479,9 @@ The journey from concept sketch to finished walnut nameplate has been incredible
 
 ## My Molding & Casting Project
 
+!!! note "CO3 Nameplate as Potential Master Pattern"
+    The finished CO3 nameplate could serve as an excellent master pattern for mold-making. Its smooth surfaces, defined letter geometry, and professional finish make it ideal for creating silicone molds that could replicate the nameplate in various materials (resin, concrete, metal). The 2mm corner radii and draft angles designed for CNC milling also facilitate easy demolding in casting applications.
+
 ### Master Pattern Fabrication
 **Method:** 3D printed in PLA
 **Finish:** Sanded to 400 grit and primed

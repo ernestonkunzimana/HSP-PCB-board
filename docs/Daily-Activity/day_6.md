@@ -51,11 +51,8 @@ Create a physical 3D prototype to:
 ### Ultimaker FDM Printer
 The Ultimaker is a desktop FDM printer known for reliability and precision. Before printing, it is critical to select the right material for the job.
 
-<figure markdown>
-  <img alt="Ultimaker 3D Printer" src="../images/day_6/ultimaker.jpeg" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-  </a>
-  <figcaption>Ultimaker 3D printer used for CO3 prototype fabrication</figcaption>
-</figure>
+![Ultimaker 3D Printer](../images/day_6/ultimaker.jpeg)
+*Ultimaker 3D printer used for CO3 prototype fabrication*
 
 ### Material Selection Guide
 
@@ -75,8 +72,6 @@ The Ultimaker is a desktop FDM printer known for reliability and precision. Befo
     - Low cost for testing purposes
 
 ---
-
-## 2. The Printing Workflow
 
 ## 2. The Printing Workflow
 
@@ -174,12 +169,8 @@ Before starting the print, proper machine setup is essential for success.
   </div>
 </div>
 
-<figure markdown>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/day_6/3.jpeg" data-desc-position="bottom">
-    <img alt="3D Printer Setup" src="../images/day_6/3.jpeg" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-  </a>
-  <figcaption>Printer setup and filament loading process</figcaption>
-</figure>
+![3D Printer Setup](../images/day_6/3.jpeg)
+*Printer setup and filament loading process*
 
 ### Pre-Print Checklist
 
@@ -346,57 +337,6 @@ The prototype validates the CAD model perfectly. Ready to proceed to final CNC f
 
 ## Reflection & Next Steps
 
-### 4. Safety Guidelines
-
-Operating a 3D printer involves high heat and moving parts.
-
-!!! danger "Safety Precautions"
-    **Heat Hazard:** The nozzle reaches 200°C+ and the bed 60°C+. Do not touch these components during operation.
-    
-    **Ventilation:** Ensure the room is well-ventilated, especially when printing materials like ABS that release fumes.
-    
-    **Supervision:** Never leave the printer unattended for long periods.
-
-### Safety Checklist
-
-- Keep hands away from moving parts
-- Do not touch hot nozzle or heated bed
-- Ensure adequate ventilation
-- Keep flammable materials away
-- Use tools (not fingers) to remove prints
-- Turn off printer when not in use
-- Monitor first 15 minutes of every print
-
----
-
-## 5. Project Showcase
-
-<figure markdown>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/day_6/co3.jpeg" data-desc-position="bottom">
-    <img alt="3D Printed CO3 Nameplate Prototype" src="../images/day_6/co3.jpeg" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-  </a>
-  <figcaption>Final 3D printed CO3 nameplate prototype - PLA material demonstrating successful depth validation</figcaption>
-</figure>
-
-### Prototype Results
-
-**Successful Validation:**
-- 4mm letter depth creates excellent visual contrast
-- Oval proportions confirmed at actual size
-- Letter legibility verified from viewing distance
-- Design ready for final walnut CNC fabrication
-- No design changes required
-
-**Print Quality Metrics:**
-- Surface finish: Good (minor layer lines acceptable for prototype)
-- Dimensional accuracy: ±0.3mm (within tolerance)
-- Print success rate: 100% (no failures or restarts)
-- Total material used: 48g PLA ($1.92)
-
----
-
-## Reflection & Next Steps
-
 ### What I Learned Today
 
 **Technical Skills:**
@@ -433,97 +373,10 @@ The prototype gives me confidence that the design is solid. Time to make the rea
 
 ---
 
-## 4. Safety Guidelines
-
-Operating a 3D printer involves high heat and moving parts.
-
-!!! danger "Safety Precautions"
-    **Heat Hazard:** The nozzle reaches 200°C+ and the bed 60°C+. Do not touch these components during operation.
-    
-    **Ventilation:** Ensure the room is well-ventilated, especially when printing materials like ABS that release fumes.
-    
-    **Supervision:** Never leave the printer unattended for long periods.
-
-### Safety Checklist
-
-- Keep hands away from moving parts
-- Do not touch hot nozzle or heated bed
-- Ensure adequate ventilation
-- Keep flammable materials away
-- Use tools (not fingers) to remove prints
-- Turn off printer when not in use
-- Monitor first 15 minutes of every print
-
----
-
-## 5. Project Showcase
-
-Below is the bracket I prepared using this workflow:
-
-<figure markdown>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ultimaker.jpeg" data-desc-position="bottom">
-    <img alt="Ultimaker 3D Printer with Printed Bracket" src="../images/ultimaker.jpeg" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-  </a>
-  <figcaption>Ultimaker 3D printer with completed bracket - demonstrating professional FDM fabrication</figcaption>
-</figure>
-
-### CO3 Nameplate Prototype
-
-<figure markdown>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/day_6/co3.jpeg" data-desc-position="bottom">
-    <img alt="3D Printed CO3 Nameplate Prototype" src="../images/day_6/co3.jpeg" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-  </a>
-  <figcaption>Final 3D printed CO3 nameplate prototype - PLA material demonstrating successful depth validation</figcaption>
-</figure>
-
-### Prototype Results
-
-**Successful Validation:**
-- 4mm letter depth creates excellent visual contrast
-- Oval proportions confirmed at actual size
-- Letter legibility verified from viewing distance
-- Design ready for final walnut CNC fabrication
-- No design changes required
-
-**Print Quality Metrics:**
-- Surface finish: Good (minor layer lines acceptable for prototype)
-- Dimensional accuracy: ±0.3mm (within tolerance)
-- Print success rate: 100% (no failures or restarts)
-- Total material used: 48g PLA ($1.92)
-
----
-
-## Visual Gallery
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
-  <figure markdown>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/day_6/2.jpeg" data-desc-position="bottom">
-      <img alt="Ultimaker Printer" src="../images/day_6/2.jpeg" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-    </a>
-    <figcaption>Ultimaker 3D printer setup</figcaption>
-  </figure>
-  
-  <figure markdown>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/day_6/3.jpeg" data-desc-position="bottom">
-      <img alt="Printing Process" src="../images/day_6/3.jpeg" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-    </a>
-    <figcaption>3D printing in progress</figcaption>
-  </figure>
-  
-  <figure markdown>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/day_6/co3.jpeg" data-desc-position="bottom">
-      <img alt="Final CO3 Prototype" src="../images/day_6/co3.jpeg" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-    </a>
-    <figcaption>Completed CO3 nameplate prototype</figcaption>
-  </figure>
-</div>
-
----
-
 ## CO3 Nameplate - Final Result
 
-![CO3 Nameplate](../images/day_6/co3.jpeg)
-*Figure: The CO3 nameplate - our completed design*
+![Final 3D Print - CO3 Nameplate](../images/day_6/Final 3D print.jpeg)
+*Final 3D Print: Showcasing the 3D printed CO3 nameplate from Ultimaker — material, resolution, and finish*
 
 ---
 
@@ -544,5 +397,3 @@ Below is the bracket I prepared using this workflow:
 ---
 
 **Tomorrow:** Day 7 – CNC Milling the final walnut CO3 nameplate!
-- Material comparison prints
--->

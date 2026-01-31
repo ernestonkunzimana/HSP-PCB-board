@@ -63,6 +63,9 @@ From Day 2's FreeCAD export, the STEP file contains:
 - Letter pockets (C, O, 3) at 4mm depth
 - 2mm corner radii throughout
 
+![Letter Sketching - Geometry for Toolpaths](../images/day_7/Letter Sketching.png)
+*Letter Sketching: Emphasizing how letter geometry respects toolpaths and router constraints - the design shows careful consideration of tool radius and carving depth for CNC milling*
+
 **Manufacturing Setup:**
 - Create new CAM workspace
 - Set machine: Generic 3-axis router

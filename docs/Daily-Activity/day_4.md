@@ -187,6 +187,9 @@ After careful evaluation, I selected **hardwood (maple or walnut)** for the CO3 
 **Process:**
 1. **Roughing Pass:** 6mm end mill removes bulk material quickly
 2. **Finishing Pass:** 4mm end mill creates smooth final surface
+
+![Edge Refinement - Chamfering and Surface Polish](../images/day_4/Edge Refinement.png)
+*Edge Refinement: Showing how chamfering and surface polish relate to material behavior and finishing - demonstrating the refined design with smooth edges and polished surfaces*
 3. **Detail Pass:** 2mm ball nose for tight corners if needed
 
 ---

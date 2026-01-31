@@ -47,6 +47,9 @@ Before jumping into CAD, I started with hand sketches to explore the design:
 
 **Design Decision:** Selected oval shape with vertically-stacked "CO3" for optimal visual impact and material efficiency.
 
+![Initial Draft - CO3 Concept Sketch](../images/day_1/Initial Draft.png)
+*Initial Draft: My first concept sketch transitioning from analog to digital modeling - exploring layout options and proportions for the CO3 nameplate*
+
 ## Modeling Workflow
 Modeling is more than just creating a shape; it is the **representation of form, logic, and behavior**. My workflow incorporates two distinct approaches:
 
@@ -61,7 +64,7 @@ By utilizing parametric thinking, I treat my models as **research tools**. This 
 * Test assumptions about fit and function.
 * Quickly adjust variables when physical constraints change.
 
-![CO3 Nameplate Design Reference](../images/day_4/2.jfif)
+![CO3 Nameplate Design Reference](../images/day_1/Initial Draft.png)
 *The CO3 nameplate design we will create throughout this course*
 
 # Fabrication Logic
@@ -165,12 +168,6 @@ Through Day 1, I have learned to:
 
 ## Visual Reference Gallery
 
-<div class="image-grid" style="margin-top: 2rem;">
-  <figure>
-    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/day_1/fabslogo.svg">
-      <img src="../images/day_1/fabslogo.svg" alt="FabLab Digital Fabrication" style="width: 100%; height: auto; border-radius: 8px;">
-    </a>
-    <figcaption>FabLab - Digital Fabrication Foundation</figcaption>
-  </figure>
-</div>
+![FabLab Digital Fabrication](../images/day_1/fabslogo.svg)
+*FabLab - Digital Fabrication Foundation*
 

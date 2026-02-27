@@ -84,6 +84,25 @@ mkdocs serve
 
 ---
 
+## 🌐 GitHub Pages (Auto Build & Deploy)
+
+This project is configured for **automatic deployment** to GitHub Pages using GitHub Actions.
+
+- Every push to `main` triggers a fresh MkDocs build
+- Pull requests run a build check (no production deploy)
+- Successful builds on `main` are published automatically
+
+### One-time repository settings
+
+1. Open **Settings → Pages** in this repository
+2. Set **Source** to **GitHub Actions**
+3. Push to `main` and wait for the workflow **Deploy MkDocs to GitHub Pages**
+
+Your site URL remains:
+**https://ernestonkunzimana.github.io/HSP-PCB-board/**
+
+---
+
 ## 📚 Documentation
 
 - **[Full 9-Day Course](docs/Daily-Activity/index.md)** — Complete learning path

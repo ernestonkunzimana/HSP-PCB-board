@@ -1,12 +1,38 @@
 # Ernest Nkunzimana – ACEIoT-WISENeT: HSP-PCB Board
 
-## 🔐 Human-Sovereign Privacy & Security PCB (HSP-PCB)
+<div class="home-hero">
+	<p class="home-hero__tag">🔐 Human-Sovereign Privacy & Security PCB (HSP-PCB)</p>
+	<p class="home-hero__lead">A verifiable, repairable, privacy-first hardware trust anchor for sovereign IoT and edge systems.</p>
+	<p><strong>Master of Science in IoT – Wireless Intelligent Sensor Networks (WISENeT)</strong><br>
+	University of Rwanda – African Center of Excellence in IoT (ACEIoT)<br>
+	Digital Fabrication & Secure Systems Design Intensive</p>
+	<p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0007-2107-6572">0009-0007-2107-6572</a> | <strong>GitHub:</strong> <a href="https://github.com/ernestonkunzimana">@ernestonkunzimana</a> | <strong>Repository:</strong> <a href="https://github.com/ernestonkunzimana/HSP-PCB-board">HSP-PCB-board</a></p>
+</div>
 
-**Master of Science in IoT – Wireless Intelligent Sensor Networks (WISENeT)**  
-**University of Rwanda – African Center of Excellence in IoT (ACEIoT)**  
-**Digital Fabrication & Secure Systems Design Intensive**
+[Open 9-Day Activities](Daily-Activity/index.md){ .md-button .md-button--primary }
+[View Day 9 Final Documentation](Daily-Activity/day_9.md){ .md-button }
 
-**ORCID:** [0009-0007-2107-6572](https://orcid.org/0009-0007-2107-6572) | **GitHub:** [@ernestonkunzimana](https://github.com/ernestonkunzimana) | **Repository:** [HSP-PCB-board](https://github.com/ernestonkunzimana/HSP-PCB-board)
+<div class="home-grid" role="list" aria-label="Project highlights">
+	<article class="home-card" role="listitem">
+		<h3>🛡️ Security by Design</h3>
+		<p>Hardware tamper detection, secure key handling, and transparent threat modeling.</p>
+	</article>
+	<article class="home-card" role="listitem">
+		<h3>🧩 Modular Architecture</h3>
+		<p>Integrates with edge gateways, sensor nodes, and sovereign IoT deployments.</p>
+	</article>
+	<article class="home-card" role="listitem">
+		<h3>♻️ Repairable Lifecycle</h3>
+		<p>Designed for maintainability, long-term use, and community-level serviceability.</p>
+	</article>
+</div>
+
+## Quick Navigation
+
+- [Project Overview](#project-overview)
+- [Technical Specifications](#technical-specs)
+- [Technologies & Tools](#technologies-tools)
+- [Projects Under Development & Research Roadmap](#roadmap-projects)
 
 ---
 
@@ -45,7 +71,7 @@ The HSP-PCB is a foundational step toward that vision.
 
 ---
 
-## 📋 HSP-PCB Project Overview
+## 📋 HSP-PCB Project Overview { #project-overview }
 
 The **Human-Sovereign Privacy & Security PCB (HSP-PCB)** is a hardware-level security module designed to **restore trust in connected systems**.
 
@@ -77,7 +103,7 @@ HSP-PCB provides a **physical trust anchor** for secure IoT ecosystems—designe
 
 ---
 
-## 📊 Technical Specifications
+## 📊 Technical Specifications { #technical-specs }
 
 | Specification | Value |
 |---------------|-------|
@@ -92,7 +118,7 @@ HSP-PCB provides a **physical trust anchor** for secure IoT ecosystems—designe
 
 ---
 
-## 🔧 Technologies & Tools
+## 🔧 Technologies & Tools { #technologies-tools }
 
 ### Embedded & Systems
 C • Rust • ARM Cortex-M • ESP32 • Secure Boot Concepts
@@ -117,7 +143,7 @@ HSP-PCB is a prototype toward:
 
 ---
 
-## 🚀 Projects Under Development & Research Roadmap
+## 🚀 Projects Under Development & Research Roadmap { #roadmap-projects }
 
 👉 **Full Portfolio & Project Roadmap:**  
 https://github.com/ernestonkunzimana?tab=repositories

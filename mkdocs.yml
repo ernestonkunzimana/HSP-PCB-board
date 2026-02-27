@@ -37,7 +37,6 @@ extra:
 theme:
   # The name of the theme, needs to match your requirements.txt file
   name: material
-  custom_dir: overrides
   # Material theme options:
   palette:
     # Dark mode (primary)
@@ -115,8 +114,7 @@ plugins:
   - search:
       lang:
         - en
-  - glightbox:
-      auto_load: true
+  - glightbox
   - git-revision-date:
       enabled_if_env: CI
   - privacy
@@ -125,16 +123,10 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:pymdownx.emoji.twemoji
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.emoji
   - pymdownx.highlight:
       use_pygments: true
       anchor_linenums: true
@@ -145,7 +137,6 @@ markdown_extensions:
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
